@@ -110,7 +110,7 @@ ul.w3-ul{list-style-type:none;padding:0;margin:0}ul.w3-ul li{padding:6px 2px 6px
 input[type=checkbox].w3-check,input[type=radio].w3-radio{width:24px;height:24px;position:relative;top:6px}
 input[type=checkbox].w3-check:checked+.w3-validate,input[type=radio].w3-radio:checked+.w3-validate{color:#009688} 
 input[type=checkbox].w3-check:disabled+.w3-validate,input[type=radio].w3-radio:disabled+.w3-validate{color:#aaa}
-.w3-bar{width:980px;margin:auto }.w3-center .w3-bar{display:inline-block;width:auto}
+.w3-bar{width:100%;margin:auto }.w3-center .w3-bar{display:inline-block;width:auto}
 .w3-bar .w3-bar-item{padding:8px 16px;float:left;background-color:inherit;color:inherit;width:auto;border:none;outline:none;display:block}
 .w3-bar .w3-dropdown-hover,.w3-bar .w3-dropdown-click{position:static;float:left}
 .w3-bar .w3-button{background-color:inherit;color:inherit;white-space:normal}
@@ -160,7 +160,7 @@ input[type=checkbox].w3-check:disabled+.w3-validate,input[type=radio].w3-radio:d
 .w3-col.l10{width:83.33333%}
 .w3-col.l11{width:91.66666%}
 .w3-col.l12{width:99.99999%}}
-.w3-content{max-width:980px;margin:auto}
+.w3-content{max-width:100%;margin:auto}
 .w3-rest{overflow:hidden}
 .w3-layout-container,.w3-cell-row{display:table;width:100%}.w3-layout-row{display:table-row}.w3-layout-cell,.w3-layout-col,.w3-cell{display:table-cell}
 .w3-layout-top,.w3-cell-top{vertical-align:top}.w3-layout-middle,.w3-cell-middle{vertical-align:middle}.w3-layout-bottom,.w3-cell-bottom{vertical-align:bottom}
