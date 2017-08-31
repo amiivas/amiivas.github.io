@@ -1,0 +1,247 @@
+.curved-box
+    {
+    position: absolute;
+    width: 250px;
+    height: 10px;
+    top: 10px;
+    left: 70%;
+    background-color: #0A5486;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    -webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	background-color:#0A5486;
+    /*background-color: #c3d0d4;*/
+}
+
+.date-picker {
+	width: 150px;
+	cursor: pointer;
+	background: transparent;
+	border: 0;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	position: absolute;
+	right:23%;
+	bottom:10px;
+}
+.ui-datepicker-calendar {
+    display: none;
+    }
+
+.date-picker {
+	
+}
+
+table.main-table {
+	width: 100%;
+	background-color: transparent;
+}
+
+.main-table thead th{
+	background-color: #0A5486;
+	color: white;
+	width: 150px;
+	white-space: nowrap;
+}
+
+.main-table tbody td {
+	/*background-color: #EEE9E9;*/
+	padding-left: 10px;
+	padding-right: 5px;
+	width: 150px;
+}
+
+th.item{
+	white-space: nowrap;
+	height: 40px;
+}
+
+td.item{
+	white-space: nowrap;
+	height: 30px;
+}
+.main-table tbody tr:nth-child(even) {background: #F4F1F1}
+.main-table tbody tr:nth-child(odd) {background: #CDC9C9}
+
+select.styled-select  {
+	
+   background: white;
+   font-size: 12px;
+   border: 1px solid #ccc;
+   width: 90%;
+}
+
+/*****For displaying popup boxes **************/
+.modal {
+    background-color:#fff;
+    display:none;
+    width:350px;
+    padding:15px;
+    text-align:left;
+    border:2px solid #333;
+ 
+    opacity:0.8;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    -moz-box-shadow: 0 0 50px #ccc;
+    -webkit-box-shadow: 0 0 50px #ccc;
+  }
+ 
+  .modal h2 {
+    background:url(/media/img/global/info.png) 0 50% no-repeat;
+    margin:0px;
+    padding:10px 0 10px 45px;
+    border-bottom:1px solid #333;
+    font-size:20px;
+  }
+
+
+td.saveTd {
+	width: 100%;
+	height: 40px;
+	background-image: url('../images/save_gr.png');
+	background-repeat: repeat-x;
+}
+
+.saveTd td a:hover{
+	background-image: url('../images/save_sel_gr.png');
+	background-repeat: repeat-x;
+}
+
+.tooltip {
+	color: white;
+}
+
+#outer-table {
+	/*Two sided shadow */
+	/* -moz-box-shadow: 10px 10px 5px #888;
+	-webkit-box-shadow: 10px 10px 5px #888;
+	box-shadow: 10px 10px 5px #888; */
+	/** All side shadow*/
+	/*#0A5486 dark blue*/
+	-moz-box-shadow: 0 0 20px 20px #0A5486;
+	-webkit-box-shadow: 0 0 20px 20px #0A5486;
+	box-shadow: 0 0 20px 20px #0A5486;
+	
+}
+
+img.delImg {
+	cursor: pointer;
+}
+/*********************/
+
+body {
+	height: 100%;
+	background-image: url('../images/bg.png');
+	background-repeat: repeat-x;
+}
+
+
+div.menu {
+	display: block;
+	/*background-color: #0A5486;*/
+	/*set the div in the top-left corner of the screen*/
+	position: absolute;
+	top: 100;
+	left: 0;
+	/*set the width and height to 100% of the screen*/
+	width: 100%;
+	height: 40px;
+}
+
+table.hmenu {
+	width: 1000px;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+td.active {
+	background-color: transparent;
+}
+
+.hmenu td a {
+	color: white;
+}
+
+ul.h-menu {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	display: block;
+	/*set the div in the top-left corner of the screen*/
+	position: absolute;
+	top: 70;
+	left: 0;
+	/*set the width and height to 100% of the screen*/
+	width: 100%;
+	height: 40px;
+	
+}
+
+.h-menu li {
+	float: left;
+	width: 10%;
+	background-color: #0A5486;
+	height: 100%;
+	border: thin 1px white;
+}
+
+.h-menu a {
+	display: block;
+	color: white;
+	margin: auto;
+	padding-top: 7px;
+	text-decoration: none;
+	text-align: center;
+}
+
+li.active {
+	float: left;
+	width: 10%;
+	background-color: transparent;
+	height: 100%;
+	font-weight: bold;
+}
+
+li.blankLI {
+	float: left;
+	width: 10%;
+	background-color: #0A5486;
+	height: 100%;
+}
+
+div.header {
+	display: block;
+	background-color: #0A5486;
+	/*set the div in the top-left corner of the screen*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	/*set the width and height to 100% of the screen*/
+	width: 100%;
+	height: 10px;
+}
+
+div.main-body {
+	top: 150px;
+	position: absolute;
+	display: block;
+	/*background-color: #0A5486;*/
+	/*set the div in the top-left corner of the screen*/
+	position: absolute;
+	top: 100;
+	left: 0;
+	/*set the width and height to 100% of the screen*/
+	width: 100%;
+	margin: 0;
+	padding-top: 30px;
+}

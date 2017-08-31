@@ -1,0 +1,140 @@
+.glossymenu, .glossymenu li ul{
+list-style-type: none;
+margin: 0;
+padding: 0;
+width: 100%; /*WIDTH OF MAIN MENU ITEMS*/
+padding-top: 2px;
+}
+
+.glossymenu li{
+position: relative;
+}
+
+.glossymenu li a{
+background: transparent url(../images/glossyback.gif) repeat-x bottom left;
+font: bold 12px Verdana, Helvetica, sans-serif;
+color: white;
+display: block;
+width: auto;
+padding: 5px 0;
+padding-left: 10px;
+text-decoration: none;
+}
+
+.glossymenu li ul{ /*SUB MENU STYLE*/
+position: absolute;
+width: 190px; /*WIDTH OF SUB MENU ITEMS*/
+left: 0;
+top: 0;
+display: none;
+}
+
+.glossymenu li ul li{
+float: left;
+}
+
+.glossymenu li ul a{
+width: 180px; /*WIDTH OF SUB MENU ITEMS - 10px padding-left for A elements */
+}
+
+.glossymenu .arrowdiv{
+position: absolute;
+right: 2px;
+background: transparent url(../images/arrow.gif) no-repeat center right;
+}
+
+.glossymenu li a:visited, .glossymenu li a:active{
+color: white;
+}
+
+.glossymenu li a:hover{
+background-image: url(../images/glossyback2.gif);
+}
+
+/* Holly Hack for IE \*/
+* html .glossymenu li { float: left; height: 1%; }
+* html .glossymenu li a { height: 1%; }
+/* End */
+
+
+/***Starting save button ****/
+
+.saveButton, .saveButton li ul{
+list-style-type: none;
+margin: 0;
+padding: 0;
+width: 100%; /*WIDTH OF MAIN MENU ITEMS*/
+padding-top: 1px;
+}
+
+.saveButton li{
+	width: 33.33%;
+	float: left;
+	
+}
+
+.saveButton li a{
+background: transparent url(../images/glossyback.gif) repeat-x bottom left;
+font: bold 12px Verdana, Helvetica, sans-serif;
+color: white;
+display: block;
+width: auto;
+padding: 5px 0;
+padding-left: 10px;
+text-decoration: none;
+
+}
+
+.saveButton li ul{ /*SUB MENU STYLE*/
+position: absolute;
+width: 190px; /*WIDTH OF SUB MENU ITEMS*/
+left: 0;
+top: 0;
+display: none;
+}
+
+.saveButton li ul li{
+float: left;
+}
+
+.saveButton li ul a{
+width: 180px; /*WIDTH OF SUB MENU ITEMS - 10px padding-left for A elements */
+}
+
+.saveButton .arrowdiv{
+position: absolute;
+right: 2px;
+background: transparent url(../images/arrow.gif) no-repeat center right;
+}
+
+.saveButton li a:visited, .saveButton li a:active{
+color: white;
+}
+
+.saveButton li a:hover{
+background-image: url(../images/glossyback2.gif);
+}
+
+/* Holly Hack for IE \*/
+* html .saveButton li { float: left; height: 1%; }
+* html .saveButton li a { height: 1%; }
+/* End */
+
+a.save {
+	height: 40px !important;
+	text-align: center;
+	 /*padding-top: 10px !important;
+	 padding-bottom: 10px !important;*/
+}
+p.t{
+	padding-top: 0px;
+	
+	}
+	
+p.blink {
+	display: none;	
+}
+p.savedMsg {
+	display: none;	
+}
+/********************/

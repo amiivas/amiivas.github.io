@@ -1,0 +1,266 @@
+table.main-table {
+	width: 100%;
+	background-color: transparent;
+	
+}
+.main-table thead th{
+	background-color: #0A5486;
+	color: white;
+	width: 150px;
+	white-space: nowrap;
+}
+
+.main-table tbody td {
+	background-color: #EEE9E9;
+	padding-left: 10px;
+	padding-right: 5px;
+	width: 150px;
+}
+
+th.item{
+	white-space: nowrap;
+	height: 40px;
+}
+
+td.item{
+	white-space: nowrap;
+	height: 30px;
+}
+.main-table tbody tr:nth-child(even) {background: #F4F1F1}
+.main-table tbody tr:nth-child(odd) {background: #CDC9C9}
+
+select.styled-select  {
+	
+   background: white;
+   font-size: 12px;
+   border: 1px solid #ccc;
+   width: 90%;
+}
+
+/*****For displaying popup boxes **************/
+.modal {
+    background-color:#fff;
+    display:none;
+    width:350px;
+    padding:15px;
+    text-align:left;
+    border:2px solid #333;
+ 
+    opacity:0.8;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    -moz-box-shadow: 0 0 50px #ccc;
+    -webkit-box-shadow: 0 0 50px #ccc;
+  }
+ 
+  .modal h2 {
+    background:url(/media/img/global/info.png) 0 50% no-repeat;
+    margin:0px;
+    padding:10px 0 10px 45px;
+    border-bottom:1px solid #333;
+    font-size:20px;
+  }
+
+
+td.saveTd {
+	width: 100%;
+	height: 40px;
+	background-image: url('../images/save_gr.png');
+	background-repeat: repeat-x;
+}
+
+.saveTd td a:hover{
+	background-image: url('../images/save_sel_gr.png');
+	background-repeat: repeat-x;
+}
+
+.tooltip {
+	color: white;
+}
+
+#outer-table {
+	/*Two sided shadow */
+	/* -moz-box-shadow: 10px 10px 5px #888;
+	-webkit-box-shadow: 10px 10px 5px #888;
+	box-shadow: 10px 10px 5px #888; */
+	/** All side shadow*/
+	/*#0A5486 dark blue*/
+	-moz-box-shadow: 0 0 15px 15px #fff;
+	-webkit-box-shadow: 0 0 15px 15px #fff;
+	box-shadow: 0 0 15px 15px #fff;
+	
+}
+/*********************/
+
+body {
+	height: 100%;
+	background-image: url('../images/bg.png');
+	background-repeat: repeat-x;
+}
+
+#apDiv1 {
+	position: absolute;
+	left: 361px;
+	top: 161px;
+	width: 186px;
+	height: 144px;
+	z-index: 1;
+}
+
+#apDiv2 {
+	position: absolute;
+	left: 306px;
+	top: 127px;
+	width: 300px;
+	height: 164px;
+	z-index: 1;
+}
+
+#apDiv3 {
+	position: absolute;
+	left: 188px;
+	top: 116px;
+	width: 100px;
+	height: 75px;
+	z-index: 1;
+}
+
+#apDiv4 {
+	position: absolute;
+	left: 387px;
+	top: 113px;
+	width: 100px;
+	height: 75px;
+	z-index: 2;
+}
+
+.bubblewrap {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.bubblewrap li {
+	display: inline;
+	width: 165px;
+	height: 165px;
+}
+
+.bubblewrap li img {
+	width: 150px; /* width of each image.*/
+	height: 165px; /* height of each image.*/
+	border: 0;
+	margin-right: 12px; /*spacing between each image*/
+	-moz-transition: -moz-transform 0.1s ease-in;
+	/*animate transform property */
+	-webkit-transition: -webkit-transform 0.1s ease-in;
+	-o-transition: -o-transform 0.1s ease-in;
+	/*animate transform property in Opera */
+}
+
+.bubblewrap li img:hover {
+	-moz-transform: scale(1.2); /*scale up image 1.8x*/
+	-webkit-transform: scale(1.2);
+	-o-transform: scale(1.2);
+}
+
+div.menu {
+	display: block;
+	/*background-color: #0A5486;*/
+	/*set the div in the top-left corner of the screen*/
+	position: absolute;
+	top: 100;
+	left: 0;
+	/*set the width and height to 100% of the screen*/
+	width: 100%;
+	height: 40px;
+}
+
+table.hmenu {
+	width: 1000px;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+td.active {
+	background-color: transparent;
+}
+
+.hmenu td a {
+	color: white;
+}
+
+ul.h-menu {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	display: block;
+	/*set the div in the top-left corner of the screen*/
+	position: absolute;
+	top: 70;
+	left: 0;
+	/*set the width and height to 100% of the screen*/
+	width: 100%;
+	height: 40px;
+	
+}
+
+.h-menu li {
+	float: left;
+	width: 10%;
+	background-color: #0A5486;
+	height: 100%;
+	border: thin 1px white;
+}
+
+.h-menu a {
+	display: block;
+	color: white;
+	margin: auto;
+	padding-top: 7px;
+	text-decoration: none;
+	text-align: center;
+}
+
+li.active {
+	float: left;
+	width: 10%;
+	background-color: transparent;
+	height: 100%;
+}
+
+li.blankLI {
+	float: left;
+	width: 10%;
+	background-color: #0A5486;
+	height: 100%;
+}
+
+div.header {
+	display: block;
+	background-color: #0A5486;
+	/*set the div in the top-left corner of the screen*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	/*set the width and height to 100% of the screen*/
+	width: 100%;
+	height: 10px;
+}
+
+div.main-body {
+	top: 150px;
+	position: absolute;
+	display: block;
+	/*background-color: #0A5486;*/
+	/*set the div in the top-left corner of the screen*/
+	position: absolute;
+	top: 100;
+	left: 0;
+	/*set the width and height to 100% of the screen*/
+	width: 100%;
+	margin: 0;
+	padding-top: 30px;
+}

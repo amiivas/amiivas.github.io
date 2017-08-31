@@ -82,7 +82,7 @@ font-family: Bookman, serif; font-size: 2em; letter-spacing: 8px; line-height: 1
 }
 
 .button-login-padding {
-padding-top: 50px;
+padding-top: 30px;
 }
 </style>
 <body>
@@ -143,10 +143,10 @@ padding-top: 50px;
 				<span onclick="document.getElementById('id01').style.display='none'"
 					class="w3-closebtn w3-hover-text-grey w3-margin">x</span>
 				<h1 class="">Log in to TechConnect</h1>
-				<form action="home.html" method="get">
+				<form action="home.html" method="post">
 				<div class="container">
-					<label><b>Username</b></label> <input type="text"
-						placeholder="Enter Username" name="uname" required> <label><b>Password</b></label>
+					<label><b>Email ID</b></label> <input type="text"
+						placeholder="Enter email id" name="emailid" required> <label><b>Password</b></label>
 					<input type="password" placeholder="Enter Password" name="psw"
 						required>
 
@@ -154,12 +154,12 @@ padding-top: 50px;
 					<input type="checkbox" checked="checked" style="float:left; margin-top: 5px; "><span style="float:left;">&nbsp; Remember me</span> 
 					<span class="psw" ><a href="#" class="w3-text-blue">Forgot password?</a></span>
 				</div>
-
+				</form>
 				<div class="container" style="background-color: #f1f1f1; margin-top: 5px;">		
 				<span style="float:left; margin: auto;">New to TechConnects? &nbsp;&nbsp;&nbsp;<a href="#" class="w3-text-blue" onclick="document.getElementById('id01').style.display = 'none'; document.getElementById('id02').style.display = 'block'">Sign up now <font style="font-size: 14px;letter-spacing: 80%;">&gt;&gt;</font></a></span>  			
 					
 				</div>
-				</form>
+				
 
 			</div>
 		</div>
@@ -167,39 +167,72 @@ padding-top: 50px;
 	
 	<div id="id02" class="w3-modal">
 		<div
-			class="w3-modal-content w3-card-8 w3-animate-zoom w3-padding-jumbo"
-			style="max-width: 600px">
+			class="w3-modal-content w3-card-8 w3-animate-zoom w3-padding-tiny"
+			style="max-width: 600px; ">
 			<div class="w3-container w3-white w3-center">
 				<span onclick="document.getElementById('id02').style.display='none'"
 					class="w3-closebtn w3-hover-text-grey w3-margin">x</span>
-				<h2 class="">Sign up for TechConnects</h2>
-				<form action="homepage.php" method="get">
+				<h2 class="">Sign up for TechConnects</h2>				
 				<div class="container">
-					<table width="100%">
-						<tr><td style="text-align:left">Username</td><td><input type="text" placeholder="Enter Username" name="uname"/></td></tr>
-						<tr><td style="text-align:left">First Name</td><td><input type="text" placeholder="Enter First Name" name="fname"/></td></tr>
-						<tr><td style="text-align:left">Last Name</td><td><input type="text" placeholder="Enter Last Name" name="lname"/></td></tr>
-						<tr><td style="text-align:left">Email</td><td><input type="text" placeholder="Enter Email" name="email"/></td></tr>
-						<tr><td style="text-align:left">Mobile</td><td><input type="text" placeholder="Enter Mobile" name="mobile"/></td></tr>
-						<tr><td style="text-align:left">Company</td><td><input type="text" placeholder="Enter Company" name="company"/></td></tr>
-						<tr><td style="text-align:left">College</td><td><input type="text" placeholder="Enter College" name="college"/></td></tr>
-						<tr><td style="text-align:left">Current Year</td><td><input type="text" placeholder="Enter Current Year" name="year"/></td></tr>
-						<tr><td style="text-align:left">Batch</td><td><input type="text" placeholder="Enter Batch" name="batch"/></td></tr>	
-						<tr><td style="text-align:left">Stream</td><td><input type="text" placeholder="Enter Stream" name="stream"/></td></tr>						
+				<form id="register" method="post" action="home.html">
+					<table width="100%">						
+						<tr><td style="text-align:left">First Name*</td><td><input type="text" placeholder="Enter First Name" name="fname" id="fname"/></td></tr>
+						<tr><td style="text-align:left">Last Name*</td><td><input type="text" placeholder="Enter Last Name" name="lname" id="lname"/></td></tr>
+						<tr><td style="text-align:left">Mobile*</td><td>+91&nbsp;-&nbsp;<input type="text" placeholder="Enter Mobile" name="mobile" id="mobile" style="width:85% !important;" onblur="validate(); return false;"/></td></tr>
+						<tr id="merror" style="display: none; color: red;"><td style="text-align:left">Error</td><td>Incorrect mobile number !</td></tr>
+						<tr><td style="text-align:left">Email*</td><td><input type="text" placeholder="Enter Email" name="email" id="email" onblur="validate(); return false;"/></td></tr>
+						<tr id="iderror" style="display: none; color: red;"><td style="text-align:left">Error</td><td>Invalid email id format !</td></tr>
+						<tr><td style="text-align:left">Password</td><td><input type="password" placeholder="Enter password" name="pwd" id="pwd"/></td></tr>
+						<tr><td style="text-align:left">Re-enter password</td><td><input type="password" placeholder="Re-enter Password" name="rpwd" id="rpwd"/></td></tr>				
+                        <tr id="error" style="display: none; color: red;"><td style="text-align:left">Error</td><td>Password did not match !</td></tr>																	
 					</table>
 					
-					<button type="submit" class="login-button">Sign Up</button>
+					<button type="submit" class="login-button" onclick="checkpassword(); return false;">Sign Up</button>
+					</form>
 					</div>
-
+                   
 				<div class="container" style="background-color: #f1f1f1; margin-top: 5px;">		
 				<span style="float:left; margin: auto;">Already a member of TechConnects? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="w3-text-blue" onclick="document.getElementById('id01').style.display = 'block'; document.getElementById('id02').style.display = 'none'">Login <font style="font-size: 14px;letter-spacing: 80%;">&gt;&gt;</font></a></span> 			
 					
-				</div>
-				</form>
+				</div>			
 
 			</div>
 		</div>
 	</div>
-
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"> </script>
+    <script type="text/javascript">
+    	function checkpassword() {
+    		var pwd = $('#pwd').val().trim();
+    		var rpwd = $('#rpwd').val().trim();
+    		if (pwd != rpwd) {
+    			alert('inside');
+    			$('#error').show();
+    		}else {
+    			$('#error').hide();
+    			$('#register').submit();
+    		}
+    	}
+    	
+    	function validate() {
+    		var mobile = $('#mobile').val().trim();
+    		if (mobile.length != 10) {
+    			$('#merror').show();
+    		}else {
+    			$('#merror').hide();
+    		}
+    		var emailID = $('#email').val().trim();
+    		if (!validateEmail(emailID)) {
+    			$('#iderror').show();
+    		}else {
+    			$('#iderror').hide();
+    		}
+    	}
+    	
+    	 function validateEmail(emailID) {
+    		  var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+    		  return emailReg.test( emailID );
+    		}
+    
+    </script>
 </body>
 </html>
