@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<title>TechConnects</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/signup.css">
+
+<style>
+
+body, html {
+	height: 100%
+}
+
+p {
+	line-height: 2
+}
+
+
+@media screen and (max-width: 685px) {
+
+  p.text-index-font {
+   font-size: 1em;
+  }
+  h1.banner-font {
+   font-size: 3em;  
+  }
+}
+/* Add padding to containers */
+.container {padding: 20px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+    float: right;
+    
+}
+/* Bordered form */
+form {
+    border: 3px solid #f1f1f1;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+    background-color: #f44336;
+    cursor: pointer;
+    float: left;
+}
+
+.login-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+@font-face {  
+	  font-family: bannerFont ;  
+	  src: url( fonts/techconnect.ttf ) format("truetype");  
+	}
+
+.banner-font {
+font-family: bannerFont; font-size: 7em; margin-bottom: 5px;
+}	
+.text-index-font {
+font-family: Bookman, serif; font-size: 2em; letter-spacing: 8px; line-height: 110%; font-weight: bold;
+}
+
+.button-login-padding {
+padding-top: 50px;
+}
+</style>
+<body>
+
+	<div class="w3-teal w3-container w3-padding-16"></div>
+	<div class="w3-container w3-padding-8"
+		style="height: 90% !important;" id="us">
+
+		<div class="w3-content w3-dark-blue" style="height: 90% !important;">
+			<h1 class="w3-center w3-text-white banner-font">
+				<b>TechConnects</b>
+			</h1>
+			<div style="height: 15%; width:15%;"  class="tc-image-center">
+			<img class="w3-grayscale-min tc-image-center"
+				src="images/man_set_1.png"> 
+				</div>
+			<p class="w3-center text-index-font">
+				YOU ARE DIFFERENT <br>YOU ARE GENIUS
+			</p>
+			<p class="w3-center w3-text-teal text-index-font">
+				GET CONNECTED <br>INVOLVE &lt; EVOLVE &gt; INVENT
+			</p>
+			<p class="w3-center button-login-padding">
+				<button
+					onclick="document.getElementById('id01').style.display='block'"
+					class="w3-button" style="padding: 1px 1px">
+					<img class="w3-grayscale-min tc-image-center"
+						src="images/signin.png">
+				</button>
+			</p>
+		</div>
+
+
+		<div
+			class="w3-bar w3-teal w3-center w3-padding-8 w3-opacity-min w3-hover-opacity-off">
+			<a href="#home" style="width: 20%" class="w3-bar-item w3-button">
+				<b>About Us</b>
+			</a> <a href="#us" style="width: 20%" class="w3-bar-item w3-button">
+				<b>Blogs</b>
+			</a> <a href="#wedding" style="width: 20%" class="w3-bar-item w3-button">
+				<b>Facebook</b>
+			</a> <a href="#rsvp" style="width: 20%" class="w3-bar-item w3-button">
+				<b>Twitter</b>
+			</a> <a href="#rsvp" style="width: 20%" class="w3-bar-item w3-button">
+				<b>Youtube</b>
+			</a>
+		</div>
+
+	</div>
+
+
+	<!-- RSVP modal -->
+	<div id="id01" class="w3-modal">
+		<div
+			class="w3-modal-content w3-card-8 w3-animate-zoom w3-padding-jumbo"
+			style="max-width: 600px">
+			<div class="w3-container w3-white w3-center">
+				<span onclick="document.getElementById('id01').style.display='none'"
+					class="w3-closebtn w3-hover-text-grey w3-margin">x</span>
+				<h1 class="">Log in to TechConnect</h1>
+				<form action="home.html" method="get">
+				<div class="container">
+					<label><b>Username</b></label> <input type="text"
+						placeholder="Enter Username" name="uname" required> <label><b>Password</b></label>
+					<input type="password" placeholder="Enter Password" name="psw"
+						required>
+
+					<button type="submit" class="login-button">Login</button>
+					<input type="checkbox" checked="checked" style="float:left; margin-top: 5px; "><span style="float:left;">&nbsp; Remember me</span> 
+					<span class="psw" ><a href="#" class="w3-text-blue">Forgot password?</a></span>
+				</div>
+
+				<div class="container" style="background-color: #f1f1f1; margin-top: 5px;">		
+				<span style="float:left; margin: auto;">New to TechConnects? &nbsp;&nbsp;&nbsp;<a href="#" class="w3-text-blue" onclick="document.getElementById('id01').style.display = 'none'; document.getElementById('id02').style.display = 'block'">Sign up now <font style="font-size: 14px;letter-spacing: 80%;">&gt;&gt;</font></a></span>  			
+					
+				</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+	
+	<div id="id02" class="w3-modal">
+		<div
+			class="w3-modal-content w3-card-8 w3-animate-zoom w3-padding-jumbo"
+			style="max-width: 600px">
+			<div class="w3-container w3-white w3-center">
+				<span onclick="document.getElementById('id02').style.display='none'"
+					class="w3-closebtn w3-hover-text-grey w3-margin">x</span>
+				<h2 class="">Sign up for TechConnects</h2>
+				<form action="homepage.php" method="get">
+				<div class="container">
+					<table width="100%">
+						<tr><td style="text-align:left">Username</td><td><input type="text" placeholder="Enter Username" name="uname"/></td></tr>
+						<tr><td style="text-align:left">First Name</td><td><input type="text" placeholder="Enter First Name" name="fname"/></td></tr>
+						<tr><td style="text-align:left">Last Name</td><td><input type="text" placeholder="Enter Last Name" name="lname"/></td></tr>
+						<tr><td style="text-align:left">Email</td><td><input type="text" placeholder="Enter Email" name="email"/></td></tr>
+						<tr><td style="text-align:left">Mobile</td><td><input type="text" placeholder="Enter Mobile" name="mobile"/></td></tr>
+						<tr><td style="text-align:left">Company</td><td><input type="text" placeholder="Enter Company" name="company"/></td></tr>
+						<tr><td style="text-align:left">College</td><td><input type="text" placeholder="Enter College" name="college"/></td></tr>
+						<tr><td style="text-align:left">Current Year</td><td><input type="text" placeholder="Enter Current Year" name="year"/></td></tr>
+						<tr><td style="text-align:left">Batch</td><td><input type="text" placeholder="Enter Batch" name="batch"/></td></tr>	
+						<tr><td style="text-align:left">Stream</td><td><input type="text" placeholder="Enter Stream" name="stream"/></td></tr>						
+					</table>
+					
+					<button type="submit" class="login-button">Sign Up</button>
+					</div>
+
+				<div class="container" style="background-color: #f1f1f1; margin-top: 5px;">		
+				<span style="float:left; margin: auto;">Already a member of TechConnects? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="w3-text-blue" onclick="document.getElementById('id01').style.display = 'block'; document.getElementById('id02').style.display = 'none'">Login <font style="font-size: 14px;letter-spacing: 80%;">&gt;&gt;</font></a></span> 			
+					
+				</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
