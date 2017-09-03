@@ -15,7 +15,7 @@ html {
   	margin-right: auto;
   	margin-left: auto;
   	top: 35%;
-  	left:27%;
+  	left:30%;
   	overflow: auto;
 	
 }
@@ -53,13 +53,6 @@ html {
 	overflow: auto;
 }
 
-.spage {
-    margin-top: 520px;
-    position:relative;
-	height: 80px;
-	width: 100%;
-	background: #303030;
-}
 
 .items {
 	width: 550px;
@@ -221,7 +214,15 @@ padding-top: 30px;
 
 }
 
-ul {
+.spage {
+    margin-top: 520px;
+    position:relative;
+	height: 80px;
+	width: 100%;
+	background: #303030;
+}
+
+.spage ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -229,14 +230,14 @@ ul {
     background-color: #303030;
 }
 
-li {
+.spage li {
     float: left;
     width:33%;
     font-size: 24px;
     height: 80px;
 }
 
-li a {
+.spage li a {
     display: block;
     color: white;
     text-align: center;
@@ -246,9 +247,10 @@ li a {
 }
 
 /* Change the link color to #111 (black) on hover */
-li a:not(.nohover):hover {
+.spage li a:not(.nohover):hover {
     background-color: white;
-    color: #303030;
+    color: #33adff;
+    font-weight: bold;
 }
 
 .tpage {
@@ -270,3 +272,88 @@ li a:not(.nohover):hover {
 	margin-left:.5%;
 }
 
+/*Top Menu bar css */
+
+.ltopmenu {
+	float: left;
+	width: auto;
+	overflow: auto;
+	max-height: 60px;
+}
+
+.ltopmenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #303030;
+    margin-left: 150px;
+    text-decoration: none;
+    
+}
+
+.ltopmenu ul li a {
+	text-decoration: none;
+	color:  #b3b6b7;
+}
+
+.ltopmenu li {
+    float: left;
+    width:auto;
+    margin-right: 20px;
+    font-size: 12px;
+    height: 60px;
+    color: white;
+    text-align: center;
+    height: 60px;
+    padding-top: 20px;
+    font-size: 16px;
+    
+}
+
+
+.ltopmenu a:hover{
+	color:  #fff;
+}
+
+.rtopmenu {
+	float: right;
+	width: auto;
+	overflow: auto;
+	max-height: 60px;
+	margin-right: 150px;
+}
+
+.rtopmenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #303030;
+    text-decoration: none;
+    
+}
+
+.rtopmenu ul li a {
+	text-decoration: none;
+	color:  #b3b6b7;
+}
+
+.rtopmenu li {
+    float: left;
+    width:auto;
+    margin-right: 20px;
+    font-size: 12px;
+    height: 60px;
+    color: white;
+    text-align: center;
+    height: 60px;
+    padding-top: 20px;
+    font-size: 16px;
+    
+}
+.rtopmenu a:hover{
+	color:  #fff;
+}
+
+/* Menu bar css ends */
