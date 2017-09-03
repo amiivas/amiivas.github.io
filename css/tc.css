@@ -1,0 +1,272 @@
+
+body {
+
+  height: 100%;
+  font-family: "Rockwell";
+}
+
+html { 
+  height: 100%;
+
+
+}
+.banner {
+	position: absolute;
+  	margin-right: auto;
+  	margin-left: auto;
+  	top: 35%;
+  	left:27%;
+  	overflow: auto;
+	
+}
+
+.container {padding: 15px;
+}
+.center {
+  width: 800px;
+  background: black;
+  margin-top: auto;
+  
+}
+.thediv{
+  min-height:100%;
+  min-width:100%;
+  background: url(../images/genius2.jpg) no-repeat center center fixed;
+  display:flex;
+  align-items:stretch;
+  position:relative;
+  background-size: 100%; 
+}
+.topmenubanner {
+	background: #303030;
+	height: 60px;
+	width: 100%;
+	
+}
+.fpage {
+	background: transparent;
+	position: absolute;
+	z-index: 1;
+	height: 520px;
+	width: 100%;
+	position: absolute;
+	overflow: auto;
+}
+
+.spage {
+    margin-top: 520px;
+    position:relative;
+	height: 80px;
+	width: 100%;
+	background: #303030;
+}
+
+.items {
+	width: 550px;
+}
+
+.container1 {
+	margin-left: 150px;
+	font-family: "Rockwell";
+	max-width: 700px;
+	float: left;
+}
+.container1 h1 {
+	font-family: "Rockwell";
+	padding-top: 18px;
+	font-size: 54px;
+}
+
+.container1 p {
+	font-size: 18px;
+	text-align: justify;
+}
+
+.container2 {
+    position: relative;
+    z-index: 2;
+	margin-right: 150px;
+	background: #303030;
+	width: 400px;
+	height: 350px;
+	float: right;
+	margin-top: 50px;
+	border-radius: 25px;
+}
+
+.loginform {
+	/*border:solid 2px red;*/
+	position: relative;
+    z-index: 3;
+	height: 100%;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20%;
+	text-align: center;
+}
+.loginform p {
+	font-family: "Rockwell";
+	color: white;
+	text-align: center;
+	line-height: 70%;
+	margin:30px;
+}
+.loginform button {
+	position: relative;
+    z-index: 4;
+	margin: 20px 15px 15px 15px;
+	padding: 10px;
+	background-color: #33adff;
+	border: 0;
+	width: 120px;
+	color: white;
+	font-family: "Rockwell";
+	font-size: 16px;
+	cursor: pointer;
+	z-index: 1;
+}
+
+
+/* The "Forgot password" text */
+span.psw {
+    float: right;
+    
+}
+/* Bordered form */
+form {
+    border: 3px solid #f1f1f1;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 4px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+    background-color: #f44336;
+    cursor: pointer;
+    float: left;
+}
+
+.login-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+@font-face {  
+	  font-family: bannerFont ;  
+	  src: url( fonts/techconnect.ttf ) format("truetype");  
+	}
+
+.banner-font {
+font-family: bannerFont; font-size: 7em; margin-bottom: 5px;
+}	
+.text-index-font {
+font-family: Bookman, serif; font-size: 2em; letter-spacing: 8px; line-height: 110%; font-weight: bold;
+}
+
+.button-login-padding {
+padding-top: 30px;
+}
+
+.footer1 {
+	background-color: #f1f1f1;
+	overflow:auto;
+	width:100%;
+	margin-top: 15px;
+}
+.footer2 {
+ float: left; 
+ margin: auto;
+ height: 40px;
+ line-height: 40px;
+ text-align: center;
+ padding-left: 10px;
+}
+
+.footer3 {
+ float: right; 
+ margin: auto;
+ height: 40px;
+ line-height: 40px;
+ text-align: center;
+ padding-right: 10px;
+}
+
+.block1 {
+	overflow:auto;
+	width:100%;
+	margin-top: 5px;
+}
+
+.modelHeader {
+
+	font-family: "Rockwell";
+	font-size: 28px;
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #303030;
+}
+
+li {
+    float: left;
+    width:33%;
+    font-size: 24px;
+    height: 80px;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    height: 80px;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:not(.nohover):hover {
+    background-color: white;
+    color: #303030;
+}
+
+.tpage {
+	height: 400px;
+	margin-left: 150px;
+	width: 100%;
+	float: left;
+	display: none;
+	margin-top: 40px;
+		
+}
+.tpage h1 {
+	font-size: 54px;
+	font-family: "Rockwell";
+}
+
+
+#li-involve {
+	margin-left:.5%;
+}
+
