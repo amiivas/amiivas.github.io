@@ -10,7 +10,22 @@
 <body>
 
 	<div class="thediv">
-	<div class="topmenubanner"></div>
+	<div class="topmenubanner">
+		<div class="ltopmenu">
+			<ul>
+				<li><a href="#scontent" onclick="togglemenu(1);">INVOLVE</a></li>
+				<li>|</li>
+				<li><a href="#scontent" onclick="togglemenu(2);">EVOLVE</a></li>
+				<li>|</li>
+				<li><a href="#scontent" onclick="togglemenu(3);">INVENT</a></li>
+			</ul>
+		</div>
+		<div class="rtopmenu">
+			<ul>
+				<li><a href="#fsection"><em>Let's Get Connected !</em></a></li>
+			</ul>
+		</div>
+	</div>
   		<div class="banner"><a href="#fsection"><img src="images/banner1.png" /></a></div>
   	</div>
     <section id="fsection">
@@ -29,7 +44,7 @@
     <p>TechConnects will help these ideas to patented and market it for business opportunities.</p>
      			
   	</div>
-  	
+
   	<div class="container2">
   	<div class="loginform">
   	<p style="	font-size: 64px;">Sign Up</p>
@@ -40,7 +55,7 @@
   	</div>
   	</div>
   	</section>
-  	<section>
+  	<section id="scontent">
   	<div class="spage"><ul>
  		 <li id="li-involve"  class="nohover"><a id="a-involve" href="#involve" onclick="togglemenu(1);" class="nohover">Involve</a></li>
  		 <li id="li-evolve" class="nohover"><a id="a-evolve" href="#evolve" onclick="togglemenu(2);" class="nohover">Evolve</a></li>
@@ -62,7 +77,7 @@
 				<span onclick="document.getElementById('id01').style.display='none'"
 					class="w3-closebtn w3-hover-text-grey w3-margin">x</span>
 				<h1 class="modelHeader">Log in to TechConnects</h1>
-				<form action="home.html" method="post" name="login" id="login">
+				<form action="home1.html" method="post" name="login" id="login">
 				<div class="container">
 					<label style="float: left; padding-left: 10px;"><b>Email ID</b></label> <input type="text"
 						placeholder="Enter email id" name="emailid" id="emailid" required> <label  style="float: left; padding-left: 10px;"><b>Password</b></label>
@@ -99,7 +114,7 @@
 					class="w3-closebtn w3-hover-text-grey w3-margin">x</span>
 				<h2 class="modelHeader">Sign up for TechConnects</h2>				
 				<div class="container">
-				<form id="register" method="post" action="home.html">
+				<form id="register" method="post" action="home1.html">
 					<table width="100%">						
 						<tr><td style="text-align:left">First Name*</td><td><input type="text" placeholder="Enter First Name" name="fname" id="fname"/></td></tr>
 						<tr><td style="text-align:left">Last Name*</td><td><input type="text" placeholder="Enter Last Name" name="lname" id="lname"/></td></tr>
@@ -168,19 +183,19 @@
 		    });
 		    
 		    function togglemenu(id) {
+		    	
+		    	$('.nohover').css({'background': ''});
+		    	
 			    if(id == 1) {
 			    	document.getElementById('involve').style.display='block';
 			    	document.getElementById('evolve').style.display='none';
 			    	document.getElementById('invent').style.display='none';
-			    	$('#li-involve').css({'background': 'white'});
-			    	$('#li-involve').css({'border-top': '6px solid #303030'});
-			    	$('#li-involve').css({'margin-left': '4px'});
-			    	$('#li-evolve').css({'background': '#303030'});
-			    	$('#li-evolve').css({'border-top': ''});
-			    	$('#li-invent').css({'background': '#303030'});
-			    	$('#li-invent').css({'border-top': ''});
-			    	$('#li-invent').css({'margin-right': ''});
-			    	$('#a-involve').css({'color':'#303030'});
+			    	
+			    	$('#li-involve').css({'background': 'white','border-top': '6px solid #303030','margin-left': '4px'});
+			    	$('#li-evolve').css({'background': '#303030','border-top': ''});
+			    	$('#li-invent').css({'background': '#303030','border-top': '','margin-right': ''});
+			    	
+			    	$('#a-involve').css({'color':'#33adff','font-weight': 'bold'});
 			    	$('#a-evolve').css({'color':'white'});
 			    	$('#a-invent').css({'color':'white'});
 			    }
@@ -188,38 +203,81 @@
 			    	document.getElementById('evolve').style.display='block';
 			    	document.getElementById('involve').style.display='none';
 			    	document.getElementById('invent').style.display='none';
-			    	$('#li-evolve').css({'background': 'white'});
-			    	$('#li-evolve').css({'border-top': '6px solid #303030'});
-			    	$('#li-involve').css({'background': '#303030'});
-			    	$('#li-involve').css({'border-top': ''});
-			    	$('#li-involve').css({'margin-left': ''});
-			    	$('#li-invent').css({'background': '#303030'});
-			    	$('#li-invent').css({'border-top': ''});
-			    	$('#li-invent').css({'margin-right': ''});
-			    	$('#a-involve').css({'color':'white'});
-			    	$('#a-evolve').css({'color':'#303030'});
-			    	$('#a-invent').css({'color':'white'});
 			    	
+			    	$('#li-evolve').css({'background': 'white','border-top': '6px solid #303030'});
+			    	$('#li-involve').css({'background': '#303030','border-top': '','margin-left': ''});
+			    	$('#li-invent').css({'background': '#303030','border-top': '','margin-right': ''});
+			    	
+			    	
+			    	$('#a-involve').css({'color':'white'});
+			    	$('#a-evolve').css({'color':'#33adff','font-weight': 'bold'});
+			    	$('#a-invent').css({'color':'white'});
 			    	
 			    }
 			    if(id == 3) {
 			    	document.getElementById('invent').style.display='block';
 			    	document.getElementById('evolve').style.display='none';
 			    	document.getElementById('involve').style.display='none';
-			    	$('#li-invent').css({'background': 'white'});
-			    	$('#li-invent').css({'border-top': '6px solid #303030'});
-			    	$('#li-invent').css({'margin-right': '4px'});
-			    	$('#li-involve').css({'background': '#303030'});
-			    	$('#li-involve').css({'border-top': ''});
-			    	$('#li-involve').css({'margin-left': ''});
-			    	$('#li-evolve').css({'background': '#303030'});
-			    	$('#li-evolve').css({'border-top': ''});
+			    	
+			    	$('#li-invent').css({'background': 'white','border-top': '6px solid #303030','margin-right': ''});
+			    	$('#li-involve').css({'background': '#303030','border-top': '','margin-left': ''});
+			    	$('#li-evolve').css({'background': '#303030','border-top': ''});
+			    	
+			    	
 			    	$('#a-involve').css({'color':'white'});
 			    	$('#a-evolve').css({'color':'white'});
-			    	$('#a-invent').css({'color':'#303030'});
+			    	$('#a-invent').css({'color':'#33adff','font-weight': 'bold'});
 			    }
 		    }
 		    
+		    var didScroll;
+
+			 // on scroll, let the interval function know the user has scrolled
+				 $(window).scroll(function(event){
+				   didScroll = true;
+				 });
+	
+			 // run hasScrolled() and reset didScroll status
+			 setInterval(function() {
+			   if (didScroll) {
+			     hasScrolled();
+			     didScroll = false;
+			   }
+			 }, 250);
+		    
+			 var lastScrollTop = 0;
+			 var delta = 5;
+			 
+			 function hasScrolled() {
+				    var st = $(this).scrollTop();
+				    
+				    // Make sure they scroll more than delta
+				    if(Math.abs(lastScrollTop - st) <= delta)
+				        return;
+				    
+				    // If they scrolled down and are past the navbar, add class .nav-up.
+				    // This is necessary so you never see what is "behind" the navbar.
+				    if (st > lastScrollTop){
+				        // Scroll Down
+				    	if($('#invent').is(':visible')) { 
+				        	$('#li-invent').css({'background':'white','color':'#303030'});
+				    	}
+				    	if($('#involve').is(':visible')) { 
+				        	$('#li-involve').css({'background':'white','color':'#303030'});
+				    	}
+				    	if($('#evolve').is(':visible')) { 
+				        	$('#li-evolve').css({'background':'white','color':'#303030'});
+				    	}
+				    } else {
+				        // Scroll Up
+				        if(st + $(window).height() < $(document).height()) {
+				            $('.tpage').hide();
+				            $('.nohover').css({'background':'#303030','color':'white'});
+				        }
+				    }
+				    
+				    lastScrollTop = st;
+				}
 		    </script>
 </body>
 </html>
