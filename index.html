@@ -5,136 +5,55 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/signup.css">
 
-<style>
+<link rel="stylesheet" href="css/tc.css">
 
-body, html {
-	height: 100%
-}
-
-p {
-	line-height: 2
-}
-
-
-@media screen and (max-width: 685px) {
-
-  p.text-index-font {
-   font-size: 1em;
-  }
-  h1.banner-font {
-   font-size: 3em;  
-  }
-}
-/* Add padding to containers */
-.container {padding: 20px;
-}
-
-/* The "Forgot password" text */
-span.psw {
-    float: right;
-    
-}
-/* Bordered form */
-form {
-    border: 3px solid #f1f1f1;
-}
-
-/* Full-width inputs */
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-/* Extra style for the cancel button (red) */
-.cancelbtn {
-    background-color: #f44336;
-    cursor: pointer;
-    float: left;
-}
-
-.login-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}
-img {
-    max-width: 100%;
-    height: auto;
-    width: auto\9; /* ie8 */
-}
-@font-face {  
-	  font-family: bannerFont ;  
-	  src: url( fonts/techconnect.ttf ) format("truetype");  
-	}
-
-.banner-font {
-font-family: bannerFont; font-size: 7em; margin-bottom: 5px;
-}	
-.text-index-font {
-font-family: Bookman, serif; font-size: 2em; letter-spacing: 8px; line-height: 110%; font-weight: bold;
-}
-
-.button-login-padding {
-padding-top: 50px;
-}
-</style>
 <body>
 
-	<div class="w3-teal w3-container w3-padding-16"></div>
-	<div class="w3-container w3-padding-8"
-		style="height: 90% !important;" id="us">
-
-		<div class="w3-content w3-dark-blue" style="height: 90% !important;">
-			<h1 class="w3-center w3-text-white banner-font">
-				<b>TechConnects</b>
-			</h1>
-			<div style="height: 15%; width:15%;"  class="tc-image-center">
-			<img class="w3-grayscale-min tc-image-center"
-				src="images/man_set_1.png"> 
-				</div>
-			<p class="w3-center text-index-font">
-				YOU ARE DIFFERENT <br>YOU ARE GENIUS
-			</p>
-			<p class="w3-center w3-text-teal text-index-font">
-				GET CONNECTED <br>INVOLVE &lt; EVOLVE &gt; INVENT
-			</p>
-			<p class="w3-center button-login-padding">
-				<button
-					onclick="document.getElementById('id01').style.display='block'"
-					class="w3-button" style="padding: 1px 1px">
-					<img class="w3-grayscale-min tc-image-center"
-						src="images/signin.png">
-				</button>
-			</p>
+	<div class="thediv">
+	<div class="topmenubanner"></div>
+  		<div class="banner"><a href="#fsection"><img src="images/banner1.png" /></a></div>
+  	</div>
+    <section id="fsection">
+  	<div class="fpage">
+  	<div class="container1">
+  		<h1>What is TechConnects</h1>
+  	
+    <p>TechConnects is a platform where students and mentors gets involved, invent with their ideas and in process evolve 
+    themselves for a bright future.</p>
+    
+    <p>TechConnects provides a medium for students to submit their ideas irrespective of how small or non-sensical it is. Each
+    idea is protected, reviewed and guided by mentors who have proven themselves with their vast on-field experience.</p>
+    
+    <p>TechConnects allows student accross geographical area to work together on same idea and colloborate to produce a end product.</p>
+    
+    <p>TechConnects will help these ideas to patented and market it for business opportunities.</p>
+     			
+  	</div>
+  	
+  	<div class="container2">
+  	<div class="loginform">
+  	<p style="	font-size: 64px;">Sign Up</p>
+  	<p 	style="font-size: 20px;">AND STAY CONNECTED !</p>
+  	<button class="w3-button" onclick="document.getElementById('id02').style.display='block';" type="button">Register</button><button class="w3-button" type="button" onclick="document.getElementById('id01').style.display='block';">Login</button>
+  	
+  	</div>
+  	</div>
+  	</div>
+  	</section>
+  	<section>
+  	<div class="spage"><ul>
+ 		 <li id="li-involve"  class="nohover"><a id="a-involve" href="#involve" onclick="togglemenu(1);" class="nohover">Involve</a></li>
+ 		 <li id="li-evolve" class="nohover"><a id="a-evolve" href="#evolve" onclick="togglemenu(2);" class="nohover">Evolve</a></li>
+  		<li id="li-invent" class="nohover"><a id="a-invent" href="#invent" onclick="togglemenu(3);" class="nohover">Invent</a></li>
+		</ul>
 		</div>
-
-
-		<div
-			class="w3-bar w3-teal w3-center w3-padding-8 w3-opacity-min w3-hover-opacity-off">
-			<a href="#home" style="width: 20%" class="w3-bar-item w3-button">
-				<b>About Us</b>
-			</a> <a href="#us" style="width: 20%" class="w3-bar-item w3-button">
-				<b>Blogs</b>
-			</a> <a href="#wedding" style="width: 20%" class="w3-bar-item w3-button">
-				<b>Facebook</b>
-			</a> <a href="#rsvp" style="width: 20%" class="w3-bar-item w3-button">
-				<b>Twitter</b>
-			</a> <a href="#rsvp" style="width: 20%" class="w3-bar-item w3-button">
-				<b>Youtube</b>
-			</a>
-		</div>
-
-	</div>
-
-
-	<!-- RSVP modal -->
+  	</section>
+  	
+  	<div id="involve" class="tpage"><h1>Who will get Involved?</h1></div>
+  	<div id="evolve" class="tpage"><h1>How will you Evolve?</h1></div>
+  	<div id="invent" class="tpage"><h1>What will you Invent?</h1></div>
+  	
+  	
 	<div id="id01" class="w3-modal">
 		<div
 			class="w3-modal-content w3-card-8 w3-animate-zoom w3-padding-jumbo"
@@ -142,64 +61,165 @@ padding-top: 50px;
 			<div class="w3-container w3-white w3-center">
 				<span onclick="document.getElementById('id01').style.display='none'"
 					class="w3-closebtn w3-hover-text-grey w3-margin">x</span>
-				<h1 class="">Log in to TechConnect</h1>
-				<form action="home.html" method="get">
+				<h1 class="modelHeader">Log in to TechConnects</h1>
+				<form action="home.html" method="post" name="login" id="login">
 				<div class="container">
-					<label><b>Username</b></label> <input type="text"
-						placeholder="Enter Username" name="uname" required> <label><b>Password</b></label>
-					<input type="password" placeholder="Enter Password" name="psw"
-						required>
+					<label style="float: left; padding-left: 10px;"><b>Email ID</b></label> <input type="text"
+						placeholder="Enter email id" name="emailid" id="emailid" required> <label  style="float: left; padding-left: 10px;"><b>Password</b></label>
+					<input type="password" placeholder="Enter Password" name="psw" id="psw"	required>
 
-					<button type="submit" class="login-button">Login</button>
-					<input type="checkbox" checked="checked" style="float:left; margin-top: 5px; "><span style="float:left;">&nbsp; Remember me</span> 
-					<span class="psw" ><a href="#" class="w3-text-blue">Forgot password?</a></span>
-				</div>
-
-				<div class="container" style="background-color: #f1f1f1; margin-top: 5px;">		
-				<span style="float:left; margin: auto;">New to TechConnects? &nbsp;&nbsp;&nbsp;<a href="#" class="w3-text-blue" onclick="document.getElementById('id01').style.display = 'none'; document.getElementById('id02').style.display = 'block'">Sign up now <font style="font-size: 14px;letter-spacing: 80%;">&gt;&gt;</font></a></span>  			
+					<button type="submit" class="login-button" onclick="loginTC(); return false;">Login</button>
+					
+					<div class="block1">
+						<div class="footer2"><input type="checkbox" checked="checked" style="float:left; margin-top: 15px; "><span style="float:left;">&nbsp; Remember me</span></div>
+						<div class="footer3">
+							<span class="psw" ><a href="#" class="w3-text-blue">Forgot password?</a></span>
+						</div>
+					</div>
+					 
 					
 				</div>
 				</form>
-
+					<div class="footer1">
+						<div class="footer2">New to TechConnects?</div>
+						<div class="footer3">
+							<a href="#" class="w3-text-blue" onclick="document.getElementById('id01').style.display = 'none'; document.getElementById('id02').style.display = 'block'">Sign up now <font style="font-size: 14px;letter-spacing: 80%;">&gt;&gt;</font></a>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
-	
-	<div id="id02" class="w3-modal">
+		
+		<div id="id02" class="w3-modal">
 		<div
-			class="w3-modal-content w3-card-8 w3-animate-zoom w3-padding-jumbo"
-			style="max-width: 600px">
+			class="w3-modal-content w3-card-8 w3-animate-zoom w3-padding-tiny"
+			style="max-width: 600px; ">
 			<div class="w3-container w3-white w3-center">
 				<span onclick="document.getElementById('id02').style.display='none'"
 					class="w3-closebtn w3-hover-text-grey w3-margin">x</span>
-				<h2 class="">Sign up for TechConnects</h2>
-				<form action="homepage.php" method="get">
+				<h2 class="modelHeader">Sign up for TechConnects</h2>				
 				<div class="container">
-					<table width="100%">
-						<tr><td style="text-align:left">Username</td><td><input type="text" placeholder="Enter Username" name="uname"/></td></tr>
-						<tr><td style="text-align:left">First Name</td><td><input type="text" placeholder="Enter First Name" name="fname"/></td></tr>
-						<tr><td style="text-align:left">Last Name</td><td><input type="text" placeholder="Enter Last Name" name="lname"/></td></tr>
-						<tr><td style="text-align:left">Email</td><td><input type="text" placeholder="Enter Email" name="email"/></td></tr>
-						<tr><td style="text-align:left">Mobile</td><td><input type="text" placeholder="Enter Mobile" name="mobile"/></td></tr>
-						<tr><td style="text-align:left">Company</td><td><input type="text" placeholder="Enter Company" name="company"/></td></tr>
-						<tr><td style="text-align:left">College</td><td><input type="text" placeholder="Enter College" name="college"/></td></tr>
-						<tr><td style="text-align:left">Current Year</td><td><input type="text" placeholder="Enter Current Year" name="year"/></td></tr>
-						<tr><td style="text-align:left">Batch</td><td><input type="text" placeholder="Enter Batch" name="batch"/></td></tr>	
-						<tr><td style="text-align:left">Stream</td><td><input type="text" placeholder="Enter Stream" name="stream"/></td></tr>						
+				<form id="register" method="post" action="home.html">
+					<table width="100%">						
+						<tr><td style="text-align:left">First Name*</td><td><input type="text" placeholder="Enter First Name" name="fname" id="fname"/></td></tr>
+						<tr><td style="text-align:left">Last Name*</td><td><input type="text" placeholder="Enter Last Name" name="lname" id="lname"/></td></tr>
+						<tr><td style="text-align:left">Role*</td><td><select name="role" id="role" style="width: 100%;border: 1px solid #ccc;padding: 0px 20px;">												
+						<option value="student" style="padding: 12px 20px;">Student</option>
+						<option value="mentor" style="padding: 12px 20px;">Mentor</option>
+						</select></td></tr>
+						<tr><td style="text-align:left">Mobile*</td><td>+91&nbsp;-&nbsp;<input type="text" placeholder="Enter Mobile" name="mobile" id="mobile" style="width:85% !important;" onblur="validate(); return false;"/></td></tr>
+						<tr id="merror" style="display: none; color: red;"><td style="text-align:left">Error</td><td>Incorrect mobile number !</td></tr>
+						<tr><td style="text-align:left">Email*</td><td><input type="text" placeholder="Enter Email" name="email" id="email" onblur="validate(); return false;"/></td></tr>
+						<tr id="iderror" style="display: none; color: red;"><td style="text-align:left">Error</td><td>Invalid email id format !</td></tr>
+						<tr><td style="text-align:left">Password</td><td><input type="password" placeholder="Enter password" name="pwd" id="pwd"/></td></tr>
+						<tr><td style="text-align:left">Re-enter password</td><td><input type="password" placeholder="Re-enter Password" name="rpwd" id="rpwd"/></td></tr>				
+                        <tr id="error" style="display: none; color: red;"><td style="text-align:left">Error</td><td>Password did not match !</td></tr>																	
 					</table>
 					
-					<button type="submit" class="login-button">Sign Up</button>
+					<button type="submit" class="login-button" onclick="checkpassword(); return false;">Sign Up</button>
+					<input type="hidden" name="profilecompleted" id="profilecompleted" value=""/>
+					<input type="hidden" name="profilepercent" id="profilepercent" value=""/>
+					</form>
+					<div class="footer1">
+					<div class="footer2">Already a member of TechConnects?</div>
+					<div class="footer3">
+					<a href="#" class="w3-text-blue" onclick="document.getElementById('id01').style.display = 'block'; document.getElementById('id02').style.display = 'none'">Login <font style="font-size: 14px;letter-spacing: 80%;">&gt;&gt;</font></a></div>
 					</div>
-
-				<div class="container" style="background-color: #f1f1f1; margin-top: 5px;">		
-				<span style="float:left; margin: auto;">Already a member of TechConnects? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="w3-text-blue" onclick="document.getElementById('id01').style.display = 'block'; document.getElementById('id02').style.display = 'none'">Login <font style="font-size: 14px;letter-spacing: 80%;">&gt;&gt;</font></a></span> 			
-					
-				</div>
-				</form>
-
+					</div>
 			</div>
 		</div>
 	</div>
-
+	    <script type="text/javascript" src="js/jquery-3.2.1.min.js"> </script>
+		    <script type="text/javascript">
+		    $('a[href*="#"]')
+		    // Remove links that don't actually link to anything
+		    .not('[href="#"]')
+		    .not('[href="#0"]')
+		    .click(function(event) {
+		      // On-page links
+		      if (
+		        location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+		        && 
+		        location.hostname == this.hostname
+		      ) {
+		        // Figure out element to scroll to
+		        var target = $(this.hash);
+		        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+		        // Does a scroll target exist?
+		        if (target.length) {
+		          // Only prevent default if animation is actually gonna happen
+		          event.preventDefault();
+		          $('html, body').animate({
+		            scrollTop: target.offset().top
+		          }, 1000, function() {
+		            // Callback after animation
+		            // Must change focus!
+		            var $target = $(target);
+		            $target.focus();
+		            if ($target.is(":focus")) { // Checking if the target was focused
+		              return false;
+		            } else {
+		              $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+		              $target.focus(); // Set focus again
+		            };
+		          });
+		        }
+		      }
+		    });
+		    
+		    function togglemenu(id) {
+			    if(id == 1) {
+			    	document.getElementById('involve').style.display='block';
+			    	document.getElementById('evolve').style.display='none';
+			    	document.getElementById('invent').style.display='none';
+			    	$('#li-involve').css({'background': 'white'});
+			    	$('#li-involve').css({'border-top': '6px solid #303030'});
+			    	$('#li-involve').css({'margin-left': '4px'});
+			    	$('#li-evolve').css({'background': '#303030'});
+			    	$('#li-evolve').css({'border-top': ''});
+			    	$('#li-invent').css({'background': '#303030'});
+			    	$('#li-invent').css({'border-top': ''});
+			    	$('#li-invent').css({'margin-right': ''});
+			    	$('#a-involve').css({'color':'#303030'});
+			    	$('#a-evolve').css({'color':'white'});
+			    	$('#a-invent').css({'color':'white'});
+			    }
+			    if(id == 2) {
+			    	document.getElementById('evolve').style.display='block';
+			    	document.getElementById('involve').style.display='none';
+			    	document.getElementById('invent').style.display='none';
+			    	$('#li-evolve').css({'background': 'white'});
+			    	$('#li-evolve').css({'border-top': '6px solid #303030'});
+			    	$('#li-involve').css({'background': '#303030'});
+			    	$('#li-involve').css({'border-top': ''});
+			    	$('#li-involve').css({'margin-left': ''});
+			    	$('#li-invent').css({'background': '#303030'});
+			    	$('#li-invent').css({'border-top': ''});
+			    	$('#li-invent').css({'margin-right': ''});
+			    	$('#a-involve').css({'color':'white'});
+			    	$('#a-evolve').css({'color':'#303030'});
+			    	$('#a-invent').css({'color':'white'});
+			    	
+			    	
+			    }
+			    if(id == 3) {
+			    	document.getElementById('invent').style.display='block';
+			    	document.getElementById('evolve').style.display='none';
+			    	document.getElementById('involve').style.display='none';
+			    	$('#li-invent').css({'background': 'white'});
+			    	$('#li-invent').css({'border-top': '6px solid #303030'});
+			    	$('#li-invent').css({'margin-right': '4px'});
+			    	$('#li-involve').css({'background': '#303030'});
+			    	$('#li-involve').css({'border-top': ''});
+			    	$('#li-involve').css({'margin-left': ''});
+			    	$('#li-evolve').css({'background': '#303030'});
+			    	$('#li-evolve').css({'border-top': ''});
+			    	$('#a-involve').css({'color':'white'});
+			    	$('#a-evolve').css({'color':'white'});
+			    	$('#a-invent').css({'color':'#303030'});
+			    }
+		    }
+		    
+		    </script>
 </body>
 </html>
