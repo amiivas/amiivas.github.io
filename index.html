@@ -64,10 +64,35 @@
 		</div>
   	</section>
   	
-  	<div id="involve" class="tpage"><h1>Who will get Involved?</h1></div>
+  	<div id="involve" class="tpage"><div class="inv-div"><h1>Who will get Involved?</h1>
+  	<p><em style="color:red; font-weight:bold">WE ALL</em> from the technical sphere of life join hands, as mentors or students to get <b style="color:#33adff;">INVOLVED</b> in this socio-technical platform providing immense
+  	 opportunities to cater to the technical aptitude of each & every student. </p> 
+  	 <p>It will provide exposure to first hand experience from the professionals who once 
+  	 crossed the same path & carved their way out to be at some of the envious positions, & connecting to a base of like minded students across the 
+  	 world sharing the same passion towards technological enhancement.</p></div>
+  	 <div class="inv-img" ><img src="images/involve.png"/></div>
+  	</div>
   	<div id="evolve" class="tpage"><h1>How will you Evolve?</h1></div>
   	<div id="invent" class="tpage"><h1>What will you Invent?</h1></div>
   	
+  	<div class="bottommenubar">
+		<div class="lbottommenu">
+			<ul>
+				<li><a href="#fsection"><em>TECHCONNECTS</em></a></li>
+			</ul>
+		</div>
+		<div class="rbottommenu">
+			<ul>
+				<li><a href="">CONTACT US</a></li>
+				<li>|</li>
+				<li><a href="">CODE OF ETHICS</a></li>
+				<li>|</li>
+				<li><a href="">FAQ</a></li>
+				<li>|</li>
+				<li><a href="">TERMS OF SERVICE</a></li>
+			</ul>
+		</div>
+	</div>
   	
 	<div id="id01" class="w3-modal">
 		<div
@@ -185,6 +210,7 @@
 		    function togglemenu(id) {
 		    	
 		    	$('.nohover').css({'background': ''});
+		    	$('.bottommenubar').show();
 		    	
 			    if(id == 1) {
 			    	document.getElementById('involve').style.display='block';
@@ -273,6 +299,7 @@
 				        if(st + $(window).height() < $(document).height()) {
 				            $('.tpage').hide();
 				            $('.nohover').css({'background':'#303030','color':'white'});
+				            $('.bottommenubar').hide();
 				        }
 				    }
 				    
