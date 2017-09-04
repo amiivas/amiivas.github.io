@@ -275,8 +275,8 @@ padding-top: 30px;
 
 .inv-img {
 	float: right;
-	width: 450px;
-	height: 450px;
+	max-width: 450px;
+	max-height: 450px;
 	/*border: 1px solid #ccc;*/
 	margin-right: 300px;
 	margin-top: 70px;
@@ -472,4 +472,9 @@ padding-top: 30px;
 	overflow: auto;
 	height: 400px;
 	float: left;
+}
+
+.inv-img img {
+margin-top: -20px;
+margin-right: 40px;	
 }
