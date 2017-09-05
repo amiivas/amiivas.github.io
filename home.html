@@ -29,8 +29,8 @@
 				<li>|</li>
 				<li class="rtopmenu-li-img">
  				<div class="dropdown-hover">
-				<img class="rtopmenu-img" src="images/pic.jpg">
-				<img src="images/opt.png" style="padding-bottom: 4px; padding-left:10px;" onclick="togglelogout();">
+				<a href="#" class="dropdown-a"><img class="rtopmenu-img" src="images/pic.jpg">
+				<img src="images/opt.png" style="padding-bottom: 4px; padding-left:10px;"></a>
 				</div>
 				<div class="dropdown-content">
 				<ul><li>
@@ -216,7 +216,7 @@
 				
 				var toggleClick = function(){
 
-			        var divObj = $('.dropdown-content').next();
+					var divObj = $('.dropdown-content');
 			        var nstyle = divObj.css("display");
 
 			        if(nstyle == "none"){
@@ -229,7 +229,15 @@
 			        }
 			    };
 
-			    $(".rtopmenu-li-img").click(toggleClick);
+			    $(".dropdown-a").click(toggleClick);
+			    
+			   /*  $("html").click(function(){
+			    	$('.dropdown-content').hide();
+			    	
+			    });
+			    $('.rtopmenu-li-img').bind('click',function(event) {
+			    	event.stopPropogation();
+			    }); */
 			    
 			});
 			
