@@ -5,184 +5,50 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/signup.css">
 <link rel="stylesheet" href="css/colorbox.css">
-
+<link rel="stylesheet" href="css/tc.css">
 <style>
-body, html {
-	height: 100%;
-}
-
-@media screen and (max-width: 685px) {
-	p.text-index-font {
-		font-size: 1em;
-	}
-	h1.banner-font {
-		font-size: 3em;
-	}
-}
-/* Add padding to containers */
-.container {
-	padding: 20px;
-}
-
-/* The "Forgot password" text */
-span.psw {
-	float: right;
-}
-/* Bordered form */
-form {
-	border: 3px solid #f1f1f1;
-}
-
-/* Full-width inputs */
-input[type=text], input[type=password] {
-	width: 100%;
-	padding: 12px 20px;
-	margin: 8px 0;
-	display: inline-block;
-	border: 1px solid #ccc;
-	box-sizing: border-box;
-}
-/* Extra style for the cancel button (red) */
-.cancelbtn {
-	background-color: #f44336;
-	cursor: pointer;
-	float: left;
-}
-
-.login-button {
-	background-color: #4CAF50;
-	color: white;
-	padding: 14px 20px;
-	margin: 8px 0;
-	border: none;
-	cursor: pointer;
-	width: 100%;
-}
-
-@font-face {
-	font-family: bannerFont;
-	src: url( fonts/techconnect.ttf ) format("truetype");
-}
-
-.banner-font {
-	font-family: bannerFont;
-	font-size: 7em;
-	margin-bottom: 5px;
-}
-
-.text-index-font {
-	font-family: Bookman, serif;
-	font-size: 4em;
-	letter-spacing: 2px;
-	line-height: 110%;
-	font-weight: bold;
-}
-
-.button-login-padding {
-	padding-top: 50px;
-}
-
-.header {
-	position: fixed;
-	width: 100%;
-}
-
-.footer {
-	height: 20px;
-}
-
-.header  a {
-	text-decoration: none;
-	margin: 25px;
-}
-
-.profile-button {
-	background-color: Transparent;
-	background-repeat: no-repeat;
-	border: none;
-	cursor: pointer;
-	overflow: hidden;
-	color: #fff;
-	font-family: Verdana, sans-serif;
-	font-size: 15px;
-	line-height: 1.5;
-	font-weight: bold;
-}
-
-img . {
-	max-width: 100%;
-	height: auto;
-}
-
-.leftpane {
-float: left; 
-width: 552px; 
-margin-left: 2em;
-}
-
-.readpane {
-	max-width: 80%;
- 	margin: auto;
- 	padding-top: .5%;
- 	height: auto;
- 	overflow: auto;
-}
-
-.items {
-	width: 550px;
-}
-
-.handshake-image div {
-	width: 100%;
-	height: 100px;
-	background-image: url('images/handshake.png');
-	background-repeat: no-repeat;
-	background-size: 100%;
-}
-
-.w4-dropdown-content {
-	cursor: auto;
-    display: none;
-    margin: 0;
-    min-width: 80px;
-    padding: 0;
-    position: absolute;
-
-}
-
-.thediv{
-  min-height:200px;
-  min-width:100%;
-  background: url(images/genius.jpg) no-repeat top center fixed;
-  display:flex;
-  align-items:stretch;
-  position:relative;
-  background-size: 100%;
-}
-.topmenubanner {
-	background: #303030;
-	height: 60px;
-	width: 100%;
-	
-}
 
 
-.banner {
-	position: absolute;
-  	margin-right: auto;
-  	margin-left: auto;
-  	left:27%;
-  	overflow: auto;
-	
-}
 </style>
+
 <body>
-	<div class="topmenubanner"></div>
-	<div class="thediv"></div>
+	
+	<div class="topmenubanner-h">
+		<div class="ltopmenu-h">
+			<ul>
+				<li><a class='inline' href="#inline_content"><em style="font-size: 20px;">AMIT SRIVASTAV</em></a></li>
+			</ul>
+		</div>
+		<div class="rtopmenu-h">
+			<ul>
+				<li>Home</li>
+				<li>|</li>
+				<li><a href="#fsection">Submit Ideas</a></li>
+				<li>|</li>
+				<li><a href="#fsection">Projects</a></li>
+				<li>|</li>
+				<li class="rtopmenu-li-img">
+ 				<div class="dropdown-hover">
+				<img class="rtopmenu-img" src="images/pic.jpg">
+				<img src="images/opt.png" style="padding-bottom: 4px; padding-left:10px;" onclick="togglelogout();">
+				</div>
+				<div class="dropdown-content">
+				<ul><li>
+					<a class='inline' href="#inline_content">View my profile</a></li> 
+					<li>
+					<a href="index.html"> Logout
+					</a></li>
+					</ul>
+				</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="banner-h"></div>
 	
 
 
-		<div class="w3-light-gray readpane">
+		<div class="readpane">
 			<div class="leftpane">
 			<div><img src="images/news.png"></div>
 			<div><fieldset class="items">This area will include any news about technology world. This will be definite area and a more link will be provided in bottom to go to more news. News page will be there in the horizontal menu also.
@@ -301,6 +167,11 @@ margin-left: 2em;
     <script type="text/javascript" src="js/colorbox/jquery.colorbox.js"> </script>
     <script type="text/javascript" src="js/bootstrap-filestyle.js"> </script>
     <script type="application/javascript">
+    
+    function togglelogout() {
+    	$('.dropdown-content').toggle();
+    }
+    
 	$("#primage").filestyle({
 		placeholder: 'Picture',
 		text: 'Upload Image',
@@ -340,9 +211,26 @@ margin-left: 2em;
 		            },
 		            error: function (xhr, status, error) {
 		                //debugger;
-		                alert("Error");
 		            }
 		        });
+				
+				var toggleClick = function(){
+
+			        var divObj = $('.dropdown-content').next();
+			        var nstyle = divObj.css("display");
+
+			        if(nstyle == "none"){
+			            divObj.slideDown(false,function(){
+			                $("html").bind("click",function(){
+			                    divObj.slideUp();
+			                    $("html").unbind("click");
+			                });
+			            });
+			        }
+			    };
+
+			    $(".rtopmenu-li-img").click(toggleClick);
+			    
 			});
 			
 			function updateProfile() {
@@ -362,7 +250,6 @@ margin-left: 2em;
 		            },
 		            error: function (xhr, status, error) {
 		                //debugger;
-		                alert("Error");
 		            }
 		        });
 			}

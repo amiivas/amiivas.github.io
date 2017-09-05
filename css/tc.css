@@ -43,6 +43,12 @@ html {
 	width: 100%;
 	
 }
+.middlemenubanner {
+	background: #303030;
+	height: 20px;
+	width: 100%;
+	
+}
 .fpage {
 	background: transparent;
 	position: absolute;
@@ -91,11 +97,10 @@ html {
 	/*border:solid 2px red;*/
 	position: relative;
     z-index: 3;
-	height: 100%;
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 20%;
+	margin-top: 15%;
 	text-align: center;
 }
 .loginform p {
@@ -478,4 +483,222 @@ padding-top: 30px;
 .inv-img img {
 margin-top: -20px;
 margin-right: 40px;	
+}
+
+
+/*Home page */
+
+.topmenubanner-h {
+	background: #303030;
+	height: 100px;
+	width: 100%;
+	z-index:1;
+	
+}
+
+.banner-h{
+  min-height:200px;
+  background: url(../images/genius.jpg) no-repeat top center fixed;
+  display:flex;
+  align-items:stretch;
+  position:relative;
+  background-size: 100%;
+  z-index: 1;
+}
+
+/*Top Menu bar css */
+
+.ltopmenu-h {
+	float: left;
+	width: auto;
+	overflow: auto;
+	max-height: 60px;
+	margin-top: 15px;
+}
+
+.ltopmenu-h ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #303030;
+    margin-left: 200px;
+    text-decoration: none;
+    z-index: 1;
+    
+}
+
+.ltopmenu-h ul li a {
+	text-decoration: none;
+	color:  #b3b6b7;
+}
+
+.ltopmenu-h li {
+    float: left;
+    width:auto;
+    margin-right: 20px;
+    font-size: 12px;
+    height: 60px;
+    color: white;
+    text-align: center;
+    height: 60px;
+    padding-top: 20px;
+    font-size: 16px;
+    
+}
+
+
+
+
+.ltopmenu-h a:hover{
+	color:  #fff;
+}
+
+.rtopmenu-h {
+	float: right;
+	width: auto;
+	overflow: auto;
+	max-height: 60px;
+	margin-right: 200px;
+	margin-top: 15px;
+}
+
+.rtopmenu-li-img {
+	padding-top: 5px !important;
+}
+
+.rtopmenu-img {
+	height: 50px;
+	width: 50px;
+	border-radius:10px;
+	
+}
+
+.rtopmenu-h ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #303030;
+    text-decoration: none;
+    
+}
+
+.rtopmenu-h ul li a {
+	text-decoration: none;
+	color:  #b3b6b7;
+}
+
+.rtopmenu-h li {
+    float: left;
+    width:auto;
+    margin-right: 20px;
+    font-size: 12px;
+    height: 60px;
+    color: white;
+    text-align: center;
+    height: 60px;
+    padding-top: 20px;
+    font-size: 16px;
+    
+}
+.rtopmenu-h a:hover{
+	color:  #fff;
+}
+
+/* Menu bar css ends */
+
+.leftpane {
+float: left; 
+width: 552px; 
+margin-left: 2em;
+}
+
+.readpane {
+	max-width: 80%;
+ 	margin: auto;
+ 	padding-top: .5%;
+ 	height: auto;
+ 	overflow: auto;
+}
+
+.items {
+	width: 550px;
+}
+
+.profile-button {
+	background: #303030;
+	border: none;
+	cursor: pointer;
+	overflow: hidden;
+	color: #b3b6b7;
+	font-weight: normal !important;
+}
+
+.dropdown-hover {
+	position:static;
+	min-width: 100%;
+	width: 100%;
+	position:relative;
+	display:inline-block;
+	cursor:pointer
+
+}
+
+.dropdown-hover:hover {
+	background-color:#303030;
+	color:#000;
+	display:block;
+	z-index:2;
+	-webkit-transition:background-color .25s,color .15s,box-shadow .25s,opacity 0.25s,filter 0.25s,border 0.15s;
+	transition:background-color .25s,color .15s,box-shadow .15s,opacity .25s,filter .25s,border .15s;
+}
+
+.dropdown-hover:first-child {
+	background-color:#303030;
+	color:#000;
+	
+}
+
+.dropdown-hover a{border-bottom:0}
+
+.dropdown-content {
+	z-index:2;
+	cursor:auto;
+	color:#000;
+	display:none;
+	position:absolute;
+	min-width:160px;
+	margin:0;
+	padding:0;
+	height: auto;
+	border-left-radius: 25px;
+	margin-top: 5px;
+	background: #303030; 	
+} 
+.dropdown-content a:hover{color:  #fff}
+.dropdown-content li a{
+	text-decoration:none !important;
+	padding:6px 16px;
+	display:block;
+	width: 100%;
+	
+	}
+	
+.dropdown-content ul {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #303030;
+    text-decoration: none;
+    width: 180px;
+	
+}
+.dropdown-content li a{
+	width: 100% !important;
+	
+}
+.separator {
+	border: 1px solid #303030;
 }
