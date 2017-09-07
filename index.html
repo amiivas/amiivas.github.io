@@ -342,11 +342,8 @@
 				             dataType: "xml",
 				            success: function (msg) {
 				                //debugger;
-				                alert(msg.getElementsByTagName('first-name')[0].innerHTML);
-				                $('#profilecompleted').val(msg.firstElementChild.getAttribute('profile-completed'));
-				                $('#profilepercent').val(msg.firstElementChild.getAttribute('profile-percent'));
-				                $('#register').attr('action', actionurl);
-				                $('#register').submit();
+				                window.location.href= actionurl;
+				                
 				            },
 				            error: function (xhr, status, error) {
 				                //debugger;
@@ -418,8 +415,10 @@
 				                	return false;
 						    		 
 				                }
-				                $('#login').attr('action', actionurl);
-				                $('#login').submit();
+				                //$('#emailid').attr('type','hidden');
+				                //$('#login').attr('action', actionurl);
+				                //$('#login').submit();
+				                window.location.href= actionurl;
 				            },
 				            error: function (xhr, status, error) {
 				                //debugger;
