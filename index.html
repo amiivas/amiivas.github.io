@@ -113,9 +113,9 @@
 				<span onclick="document.getElementById('id01').style.display='none'"
 					class="w3-closebtn w3-hover-text-grey w3-margin">x</span>
 				<h1 class="modelHeader">Log in to TechConnects</h1>
-				<form action="home.html" method="post" name="login" id="login">
+				<form action="home.html" method="get" name="login" id="login">
 				<div class="container">
-					<label style="float: left; padding-left: 10px;"><b>Email ID</b></label> <input type="email"
+					<label style="float: left; padding-left: 10px;"><b>Email ID</b></label> <input type="text"
 						placeholder="Enter email id" name="emailid" id="emailid" required> <img id="email-error" style="display:none;" src="images/email_exists.png"> <label  style="float: left; padding-left: 10px;"><b>Password</b></label>
 						
 					<input type="password" placeholder="Enter Password" name="psw" id="psw"	required>
@@ -331,7 +331,7 @@
 		    			
 		    			var data = $('#register').serialize();    			
 		    			//var url = 'http://127.0.0.1:8080/TechConnectWebDb/register.htm?session_id=' + uuid;
-		    			var url = 'http://ec2-18-221-3-118.us-east-2.compute.amazonaws.com/TechConnectWebDb/register.htm?session_id=' + uuid;
+		    			var url = 'https://ec2-18-221-3-118.us-east-2.compute.amazonaws.com/TechConnectWebDb/register.htm?session_id=' + uuid;
 		    			var actionurl = 'home.html?session_id=' + uuid;
 						$.ajax({
 							crossDomain: true,
@@ -398,7 +398,7 @@
 		    		 var uuid = uuidv4();
 		    		 var data = $('#login').serialize();
 		    		 //var url = 'http://127.0.0.1:8080/TechConnectWebDb/login.htm?session_id=' + uuid;
-		 			 var url = 'http://ec2-18-221-3-118.us-east-2.compute.amazonaws.com/TechConnectWebDb/login.htm?session_id=' + uuid;
+		 			 var url = 'https://ec2-18-221-3-118.us-east-2.compute.amazonaws.com/TechConnectWebDb/login.htm?session_id=' + uuid;
 		 			 var actionurl = 'home.html?session_id=' + uuid;
 						$.ajax({
 							crossDomain: true,
