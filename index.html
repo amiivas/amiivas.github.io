@@ -50,7 +50,7 @@
   	<div class="loginform">
   	<p style="	font-size: 64px;">Sign Up</p>
   	<p 	style="font-size: 20px;">AND STAY CONNECTED !</p>
-  	<button class="w3-button" onclick="document.getElementById('id02').style.display='block';" type="button">Register</button><button class="w3-button" type="button" onclick="document.getElementById('id01').style.display='block';">Login</button>
+  	<button class="w3-button" onclick="document.getElementById('id02').style.display='block';" type="button">Register</button><button class="w3-button" type="button" onclick="openLogin(); return false;">Login</button>
   	
   	</div>
   	</div>
@@ -115,11 +115,14 @@
 				<h1 class="modelHeader">Log in to TechConnects</h1>
 				<form action="home.html" method="post" name="login" id="login">
 				<div class="container">
-					<label style="float: left; padding-left: 10px;"><b>Email ID</b></label> <input type="text"
-						placeholder="Enter email id" name="emailid" id="emailid" required> <label  style="float: left; padding-left: 10px;"><b>Password</b></label>
+					<label style="float: left; padding-left: 10px;"><b>Email ID</b></label> <input type="email"
+						placeholder="Enter email id" name="emailid" id="emailid" required> <img id="email-error" style="display:none;" src="images/email_exists.png"> <label  style="float: left; padding-left: 10px;"><b>Password</b></label>
+						
 					<input type="password" placeholder="Enter Password" name="psw" id="psw"	required>
 
-					<button type="submit" class="login-button" onclick="loginTC(); return false;">Login</button>
+					<button type="button" class="login-button" onclick="loginTC(); return false;">Login</button>
+					<img id="user-error" style="display:none;" src="images/error_user.png">
+					<img id="pwd-error" style="display:none;" src="images/error_pwd.png">
 					
 					<div class="block1">
 						<div class="footer2"><input type="checkbox" checked="checked" style="float:left; margin-top: 15px; "><span style="float:left;">&nbsp; Remember me</span></div>
@@ -154,11 +157,11 @@
 					<table width="100%">						
 						<tr><td style="text-align:left">First Name*</td><td><input type="text" placeholder="Enter First Name" name="fname" id="fname"/></td></tr>
 						<tr><td style="text-align:left">Last Name*</td><td><input type="text" placeholder="Enter Last Name" name="lname" id="lname"/></td></tr>
-						<tr><td style="text-align:left">Role*</td><td><select name="role" id="role" style="width: 100%;border: 1px solid #ccc;padding: 0px 20px;">												
-						<option value="student" style="padding: 12px 20px;">Student</option>
-						<option value="mentor" style="padding: 12px 20px;">Mentor</option>
+						<tr><td style="text-align:left">Role*</td><td><select name="role" id="role" style="width: 100%;border: 1px solid #ccc; height:50px;">												
+						<option value="student" style="padding: 12px 20px; height:50px;">Student</option>
+						<option value="mentor" style="padding: 12px 20px;  height:50px;">Mentor</option>
 						</select></td></tr>
-						<tr><td style="text-align:left">Mobile*</td><td>+91&nbsp;-&nbsp;<input type="text" placeholder="Enter Mobile" name="mobile" id="mobile" style="width:85% !important;" onblur="validate(); return false;"/></td></tr>
+						<tr><td style="text-align:left">Mobile*</td><td>+91&nbsp;-&nbsp;<input type="text" placeholder="Enter Mobile" name="mobile" id="mobile" style="width:87% !important;" onblur="validate(); return false;"/></td></tr>
 						<tr id="merror" style="display: none; color: red;"><td style="text-align:left">Error</td><td>Incorrect mobile number !</td></tr>
 						<tr><td style="text-align:left">Email*</td><td><input type="text" placeholder="Enter Email" name="email" id="email" onblur="validate(); return false;"/></td></tr>
 						<tr id="iderror" style="display: none; color: red;"><td style="text-align:left">Error</td><td>Invalid email id format !</td></tr>
@@ -327,7 +330,8 @@
 		    			$('#error').hide();
 		    			
 		    			var data = $('#register').serialize();    			
-		    			var url = 'http://127.0.0.1:8080/TechConnectWebDb/register.htm?session_id=' + uuid;
+		    			//var url = 'http://127.0.0.1:8080/TechConnectWebDb/register.htm?session_id=' + uuid;
+		    			var url = 'http://ec2-18-221-3-118.us-east-2.compute.amazonaws.com/TechConnectWebDb/register.htm?session_id=' + uuid;
 		    			var actionurl = 'home.html?session_id=' + uuid;
 						$.ajax({
 							crossDomain: true,
@@ -381,10 +385,20 @@
 		    	 
 		    	 function loginTC() {
 		    		 var emailid = $('#emailid').val();
+		    		 if (emailid == "") {
+		    			 $("#email-error").show();
+		    			 return false;
+		    		 }else {
+		    			 if ($("#email-error").css('display') == "block"){
+		    			 $("#email-error").hide();
+		    			 }
+		    		 }
 		    		 var psw = $('#psw').val();
+
 		    		 var uuid = uuidv4();
 		    		 var data = $('#login').serialize();
-		    		 var url = 'http://127.0.0.1:8080/TechConnectWebDb/login.htm?session_id=' + uuid;
+		    		 //var url = 'http://127.0.0.1:8080/TechConnectWebDb/login.htm?session_id=' + uuid;
+		 			 var url = 'http://ec2-18-221-3-118.us-east-2.compute.amazonaws.com/TechConnectWebDb/login.htm?session_id=' + uuid;
 		 			 var actionurl = 'home.html?session_id=' + uuid;
 						$.ajax({
 							crossDomain: true,
@@ -392,9 +406,18 @@
 				             url: url,
 				             data: data,
 				             contentType: "application/x-www-form-urlencoded",
-				             dataType: "xml",
+				             dataType: "text",
 				            success: function (msg) {
 				                //debugger;
+				                if (msg=='user not found !'){
+				                	$("#user-error").show();
+				                	return false;
+				                }
+				                if (msg == 'Password did not match !') {
+				                	$("#pwd-error").show();
+				                	return false;
+						    		 
+				                }
 				                $('#login').attr('action', actionurl);
 				                $('#login').submit();
 				            },
@@ -404,6 +427,14 @@
 				            }
 				        });
 		    	 }
+		    	 
+		    	 function openLogin(){
+		    		 $("#email-error").hide();
+		    		 $("#pwd-error").hide();
+		    		 $("#user-error").hide();
+		    		 document.getElementById('id01').style.display='block';	 
+		    	 }
+		    	  
 		    </script>
 </body>
 </html>
