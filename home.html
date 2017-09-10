@@ -109,64 +109,64 @@
     
     <!-- This contains the hidden content for inline calls -->
 
-		<div style='display:none' id="profilediv">
-		<div id='inline_content' style='padding:10px; background:#fff;'>
-		<div id="page-wrap">
-		    <div id="profile-stuff">
-		        <div id="profile-top">
-		            <div id="profile-picture-wrap">
-		                <div id="profile-picture">
-		                <div id="prupld" style="display:none;"><input type="file" class="filestyle" id="primage" name="primage" placeholder="upload image"/></div>
-		                <div><img src=""  id="profile-img"/></div>
-		                </div>
-		            </div>
-		            <div id="profile-top-right">
-		                <div id="user-name" class="username">
-		                </div>
-		            </div>
-		        </div>
-		        <div id="cover-wrap">
-		            <div id="fact-wrap">
-		                <div class="user-fact" id="user-role">
-		                
-		                </div>
-		                
-		            </div>
+	<div style='display: none' id="profilediv">
+		<div id='inline_content' style='padding: 10px; background: #fff;'>
+			<form id="profileForm" method="post" enctype="multipart/form-data">
+				<div id="page-wrap">
+					<div id="profile-top-bar">
+						<div id="profile-picture">
+							<div id="prupld" style="display: none;">
+								<input type="file" class="filestyle" id="primage" name="primage"
+									placeholder="upload image" />
+							</div>
+							<div>
+								<img src="" id="profile-img" />
+							</div>
+						</div>
+						<div id="profile-top-right">
+							<div id="user-name" class="username">Amit Srivastav</div>
+								<div id="fact-wrap">
+									<div class="user-fact" id="user-role">Student</div>
+								</div>
+						</div>
+					</div>
+					
 		            <div class="form-style-5">
-					<form>
+					
 					<fieldset>
 					<legend><span class="number">1</span> Personal Info</legend>
-					<input type="text" name="prname" id="prname" placeholder="Your Name *" readonly="readonly">
-					<input type="email" name="premail" id="premail" placeholder="Your Email *" readonly="readonly">
-					<input type="text" name="prmobile" id="prmobile" placeholder="Your Mobile +91-*">
-					<input type="text" name="prcollege" id="prollege" placeholder="Your College *">
-					<input type="text" name="pruniv" id="pruniv" placeholder="Your University *">
-					<input type="text" name="prstream" id="prstream" placeholder="Your Stream *">
-					<input type="text" name="pryear" id="pryear" placeholder="Your Passing year *">
-					<input type="text" name="prdob" id="prdob" placeholder="Your Date of Birth *">
+					<label>Full Name</label><input type="text" name="prname" id="prname" placeholder="Your Name *" readonly="readonly">
+					<label>Email</label><input type="email" name="premail" id="premail" placeholder="Your Email *" readonly="readonly">
+					<label>Mobile</label><input type="text" name="prmobile" id="prmobile" placeholder="Your Mobile +91-*">
+					<label>College</label><input type="text" name="prcollege" id="prcollege" placeholder="Your College *">
+					<label>University</label><input type="text" name="pruniv" id="pruniv" placeholder="Your University *">
+					<label>Stream</label><input type="text" name="prstream" id="prstream" placeholder="Your Stream *">
+					<label>Year</label><input type="text" name="pryear" id="pryear" placeholder="Your Passing year *">
+					<label>Date of Birth</label><input type="text" name="prdob" id="prdob" placeholder="Your Date of Birth *">
 					<input type="hidden" name="session_id" id="session_id" value="">
-					<textarea name="printarea" id="printarea" placeholder="Interest Area "></textarea>
+					<label>Interest Area</label><textarea name="printarea" id="printarea" placeholder="Interest Area "></textarea>
 					
 					<legend><span class="number">2</span> Additional Info</legend>
 					<textarea name="pryourself" id="pryourself" placeholder="About Yourself "></textarea>
 					
 					<button type="button" class="prbutton" onclick="updateProfile(); return false;">Update Profile</button>
 					</fieldset>
-					</form>
 					
 					</div>
 		        </div>
+		        </form>
 					
 		    </div>
 		    </div>
-		    </div>
-		    </div>
-    
-    <script type="text/javascript" src="js/jquery-3.2.1.min.js"> </script>
-    <script type="text/javascript" src="js/jquery.getUrlParam.js"> </script>
-    <script type="text/javascript" src="js/colorbox/jquery.colorbox.js"> </script>
-    <script type="text/javascript" src="js/bootstrap-filestyle.js"> </script>
-    <script type="application/javascript">
+		    
+
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js">
+			
+		</script>
+		<script type="text/javascript" src="js/jquery.getUrlParam.js"> </script>
+		<script type="text/javascript" src="js/colorbox/jquery.colorbox.js"> </script>
+		<script type="text/javascript" src="js/bootstrap-filestyle.js"> </script>
+		<script type="application/javascript">
     
     function togglelogout() {
     	$('.dropdown-content').toggle();
@@ -182,7 +182,8 @@
 				$(".inline").colorbox({inline:true, width:"80%", height: "100%"});
 				
 				var session_id = $(document).getUrlParam("session_id");
-				var url = 'http://127.0.0.1:8080/TechConnectWebDb/pullRecord.htm?session_id=' + session_id;
+				//var url = 'http://localhost.tmmna.com:8080/TechConnectWebDb/pullRecord.htm?session_id=' + session_id;
+				var url = 'https://ec2-18-221-3-118.us-east-2.compute.amazonaws.com/TechConnectWebDb/pullRecord.htm?session_id=' + session_id;
 				$.ajax({
 					crossDomain: true,
 		             type: "GET",
@@ -199,8 +200,29 @@
 		                $('#prname').val( msg.getElementsByTagName('first-name')[0].innerHTML + ' ' + msg.getElementsByTagName('last-name')[0].innerHTML);
 		                $('#user-role').text(msg.getElementsByTagName('role')[0].innerHTML);
 		                $('#premail').val(msg.getElementsByTagName('email-id')[0].innerHTML);
+		                if(typeof msg.getElementsByTagName('mobile')[0] != "undefined" ) {
+		                	$('#prmobile').val(msg.getElementsByTagName('mobile')[0].innerHTML);
+		                }		                
 		                if(typeof msg.getElementsByTagName('college')[0] != "undefined" ) {
 		                	$('#prcollege').val(msg.getElementsByTagName('college')[0].innerHTML);
+		                }
+		                if(typeof msg.getElementsByTagName('university')[0] != "undefined" ) {
+		                	$('#pruniv').val(msg.getElementsByTagName('university')[0].innerHTML);
+		                }
+		                if(typeof msg.firstElementChild.getAttribute('year') != "undefined" ) {
+		                	$('#pryear').val(msg.firstElementChild.getAttribute('year'));
+		                }
+		                if(typeof msg.getElementsByTagName('stream')[0] != "undefined" ) {
+		                	$('#prstream').val(msg.getElementsByTagName('stream')[0].innerHTML);
+		                }
+		                if(typeof msg.getElementsByTagName('dob')[0] != "undefined" ) {
+		                	$('#prdob').val(msg.getElementsByTagName('dob')[0].innerHTML);
+		                }
+		                if(typeof msg.getElementsByTagName('interest_area')[0] != "undefined" ) {
+		                	$('#printarea').val(msg.getElementsByTagName('interest-area')[0].innerHTML);
+		                }
+		                if(typeof msg.getElementsByTagName('profile')[0] != "undefined" ) {
+		                	$('#pryourself').val(msg.getElementsByTagName('profile')[0].innerHTML);
 		                }
 		                if(typeof msg.getElementsByTagName('image-file')[0] != "undefined" ) {
 		                	$('#profile-img').attr('src',msg.getElementsByTagName('image-file')[0].innerHTML);
@@ -244,15 +266,22 @@
 			function updateProfile() {
 				$('#profilediv').hide();
 				var session_id = $(document).getUrlParam("session_id");
-				var data = $('#profileform').serialize();
-				var url = 'http://127.0.0.1:8080/TechConnectWebDb/updateProfile.htm?session_id=' + session_id;
+				var form = $('#profileForm')[0];
+				var data = new FormData(form);
+				//var url = 'http://localhost.tmmna.com:8080/TechConnectWebDb/updateProfile.htm?session_id=' + session_id;
+				var url = 'https://ec2-18-221-3-118.us-east-2.compute.amazonaws.com/TechConnectWebDb/updateProfile.htm?session_id=' + session_id;
+				
 				$.ajax({
 					crossDomain: true,
 		             type: "post",
 		             url: url,
 		             data: data,
-		             contentType: "application/x-www-form-urlencoded",
-		             dataType: "xml",
+		             enctype:"multipart/form-data",
+		             processData: false,
+		             contentType: false,
+		             cache: false,
+		             timeout: 600000,
+		             dataType:"text",
 		            success: function (msg) {
 		                location.reload();
 		            },
