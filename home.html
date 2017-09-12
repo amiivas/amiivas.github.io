@@ -29,8 +29,14 @@
 				<li>|</li>
 				<li class="rtopmenu-li-img">
  				<div class="dropdown-hover">
-				<a href="#" class="dropdown-a"><img class="rtopmenu-img" src="images/pic.jpg">
-				<img src="images/opt.png" style="padding-bottom: 4px; padding-left:10px;"></a>
+				<a href="#" class="dropdown-a">
+				<table>
+				<tr><td><img class="rtopmenu-img" src="" id="menu-img" ></td>
+				<td><div id="menu-div" style="display:none;padding-top:10px"></div></td>
+				<td><img src="images/opt.png" style="padding-bottom: 4px; padding-left:10px;padding-top:16px;"></td></tr>
+				</table>
+				
+				</a>
 				</div>
 				<div class="dropdown-content">
 				<ul><li>
@@ -253,8 +259,12 @@
 		               if(typeof msg.getElementsByTagName('image-file')[0] != "undefined" && msg.getElementsByTagName('image-file')[0].innerHTML.trim() != '') {
 		            	   document.getElementById('profile-img').style.display = 'block';
 		                	$('#profile-img').attr('src',msg.getElementsByTagName('image-file')[0].innerHTML);
+		                	$('.rtopmenu-img').attr('src',msg.getElementsByTagName('image-file')[0].innerHTML);
 		                }else { 
 		                	$('#prupld').show();
+		                	document.getElementById('menu-img').style.display = 'none';
+		                	$('#menu-div').text(msg.getElementsByTagName('first-name')[0].innerHTML);
+		                	document.getElementById('menu-div').style.display = 'block';
 		                }
 		                $('#profilemenu').text('Profile (' + msg.firstElementChild.getAttribute('profile-percent') + '%)');
 		            },

@@ -450,9 +450,30 @@ padding-top: 30px;
     
 }
 
-.rbottommenu ul li a {
+.dropdown-a ul {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #303030;
+    text-decoration: none;
+}
+
+.dropdown-a ul li {
 	text-decoration: none;
-	color:  #b3b6b7;
+}
+
+.dropdown-a li {
+	float: left;
+    width:auto;
+    margin-right: 20px;
+    font-size: 12px;
+    height: 60px;
+    color: white;
+    text-align: center;
+    height: 60px;
+    padding-top: 15px;
+    font-size: 16px;
 }
 
 .rbottommenu li {
@@ -572,6 +593,10 @@ margin-right: 40px;
 	width: 50px;
 	border-radius:10px;
 	
+}
+.rtopmenu-div {
+	height: 50px;
+	text-align: center;	
 }
 
 .rtopmenu-h ul {
