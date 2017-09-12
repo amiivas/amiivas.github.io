@@ -591,3 +591,46 @@ input[type=checkbox].w3-check:disabled+.w3-validate,input[type=radio].w3-radio:d
     -moz-box-sizing: border-box;
 	
 }
+
+.classfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.classfile + label {
+    color: #303030;
+    display: inline-block;
+    cursor: pointer;
+    background: #DF474B;
+    width:80px;
+    bckground: #DF474B;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-left: 10px;
+    text-align: center;
+    color: white;
+}
+
+.classfile:focus + label,
+.classfile + label:hover {
+}
+
+#picname {
+	    color: #303030;
+    display: inline-block;
+    cursor: pointer;
+    background: #DF474B;
+    width:90px;
+    height: 50px;
+    bckground: #DF474B;
+    border-radius: 10px;
+    margin-top: 40px;
+    text-align: center;
+    padding-top:20px;
+    color: white;
+	
+}

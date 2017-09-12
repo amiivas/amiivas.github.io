@@ -54,7 +54,7 @@
 			<div><fieldset class="items">This area will include any news about technology world. This will be definite area and a more link will be provided in bottom to go to more news. News page will be there in the horizontal menu also.
 						<ul style="margin-left:-1.5em">
   							<li>div 1</li>
-  							<li><a class='inline' href="#inline_content">Inline HTML</a></li>
+  							<li><a class='inline' href="#inline_content" onclick="hideImages();">Inline HTML</a></li>
   							<li>News 3</li>
   							<li><a href="#" >More..</a></li>
 						</ul> 
@@ -116,11 +116,13 @@
 					<div id="profile-top-bar">
 						<div id="profile-picture">
 							<div id="prupld" style="display: none;">
-								<input type="file" class="filestyle" id="primage" name="primage"
-									placeholder="upload image" />
+								<input type="file"  id="primage" name="primage" class="classfile"
+									placeholder="upload image" onchange="changelabel(this.value)"/>
+									<label for="primage" onclick="togglepic(); return false;" id="uploadpic">Upload Image</label>
+									<label for="primage" style="display: none;" id="picname">check</label>
 							</div>
 							<div>
-								<img src="" id="profile-img" />
+								<img src="" id="profile-img" style="display:none;" />
 							</div>
 						</div>
 						<div id="profile-top-right">
@@ -172,13 +174,36 @@
     	$('.dropdown-content').toggle();
     }
     
-	$("#primage").filestyle({
+    function togglepic() {
+    	$('#uploadpic').hide();
+    	
+    	$('#primage').click();
+    	
+    	   	
+    }
+    
+    function hideImages() {
+    	document.getElementById('picname').style.display = 'none';
+    	document.getElementById('uploadpic').style.display = 'block';
+    	document.getElementById('profile-img').style.display = 'none';
+    }
+    function changelabel(filepath) {
+    	
+    	var filearray  = filepath.split('\\');
+    	$('#picname').text(filearray[2]);
+    	
+    	document.getElementById('picname').style.display = 'block';
+    	
+    }
+    
+/* 	$("#primage").filestyle({
 		placeholder: 'Picture',
 		text: 'Upload Image',
 		btnClass : 'btn-secondary'
-	});
+	}); */
 			$( document ).ready(function() {
 				
+		    	
 				$(".inline").colorbox({inline:true, width:"80%", height: "100%"});
 				
 				var session_id = $(document).getUrlParam("session_id");
@@ -224,9 +249,11 @@
 		                if(typeof msg.getElementsByTagName('profile')[0] != "undefined" ) {
 		                	$('#pryourself').val(msg.getElementsByTagName('profile')[0].innerHTML);
 		                }
-		                if(typeof msg.getElementsByTagName('image-file')[0] != "undefined" ) {
+		                
+		               if(typeof msg.getElementsByTagName('image-file')[0] != "undefined" && msg.getElementsByTagName('image-file')[0].innerHTML.trim() != '') {
+		            	   document.getElementById('profile-img').style.display = 'block';
 		                	$('#profile-img').attr('src',msg.getElementsByTagName('image-file')[0].innerHTML);
-		                }else {
+		                }else { 
 		                	$('#prupld').show();
 		                }
 		                $('#profilemenu').text('Profile (' + msg.firstElementChild.getAttribute('profile-percent') + '%)');
@@ -252,14 +279,6 @@
 			    };
 
 			    $(".dropdown-a").click(toggleClick);
-			    
-			   /*  $("html").click(function(){
-			    	$('.dropdown-content').hide();
-			    	
-			    });
-			    $('.rtopmenu-li-img').bind('click',function(event) {
-			    	event.stopPropogation();
-			    }); */
 			    
 			});
 			
