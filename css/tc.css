@@ -949,7 +949,7 @@ width: 700px; height: 400px; margin-left: 250px;
 }
 
 .dc-div p {
-	font-size: 18px;
+	font-size: 16px;
 	text-align: justify;
 	padding: 5px 5px 5px 10px;
 }
@@ -957,11 +957,13 @@ width: 700px; height: 400px; margin-left: 250px;
 .dc-div h2 {
   padding: 10px;
   background: #33adff; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left, #33adff , white); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(right, #33adff, white); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(right, #33adff, white); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(to right, #33adff , white); /* Standard syntax */
+  background: -webkit-linear-gradient(left, #303030, white); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #303030,white); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #303030, white); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #303030, white); /* Standard syntax */
   font-family: Rockwell;
+  font-size: 20px !important;
+  color: white;
 }
 
 .dcbutton {
