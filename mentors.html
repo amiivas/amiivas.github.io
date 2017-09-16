@@ -209,8 +209,8 @@
 				$(".inline").colorbox({inline:true, width:"80%", height: "100%"});
 				
 				var session_id = $(document).getUrlParam("session_id");
-				var url = 'http://localhost.tmmna.com:8080/TechConnectWebDb/pullRecord.htm?session_id=' + session_id;
-				//var url = 'https://ec2-18-221-3-118.us-east-2.compute.amazonaws.com/TechConnectWebDb/pullRecord.htm?session_id=' + session_id;
+				//var url = 'http://localhost.tmmna.com:8080/TechConnectWebDb/pullRecord.htm?session_id=' + session_id;
+				var url = 'https://ec2-18-221-3-118.us-east-2.compute.amazonaws.com/TechConnectWebDb/pullRecord.htm?session_id=' + session_id;
 				$.ajax({
 					crossDomain: true,
 		             type: "GET",
@@ -295,8 +295,8 @@
 				var session_id = $(document).getUrlParam("session_id");
 				var form = $('#profileForm')[0];
 				var data = new FormData(form);
-				var url = 'http://localhost.tmmna.com:8080/TechConnectWebDb/updateProfile.htm?session_id=' + session_id;
-				//var url = 'https://ec2-18-221-3-118.us-east-2.compute.amazonaws.com/TechConnectWebDb/updateProfile.htm?session_id=' + session_id;
+				//var url = 'http://localhost.tmmna.com:8080/TechConnectWebDb/updateProfile.htm?session_id=' + session_id;
+				var url = 'https://ec2-18-221-3-118.us-east-2.compute.amazonaws.com/TechConnectWebDb/updateProfile.htm?session_id=' + session_id;
 				
 				$.ajax({
 					crossDomain: true,
