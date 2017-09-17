@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<title>TechConnects</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/signup.css">
+<link rel="stylesheet" href="css/colorbox.css">
+<link rel="stylesheet" href="css/tc.css">
+<style>
+
+
+</style>
+
+<body>
+	
+	<div class="topmenubanner-h">
+		<div class="ltopmenu-h">
+			<ul>
+				<li><em style="font-size: 20px;">TECHCONNECTS</em></li>
+			</ul>
+		</div>
+		<div class="rtopmenu-h">
+			<ul>
+				<li><a href="#" id="a-home">Home</a></li>
+				<li>|</li>
+				<li><a href="#" id="a-mentors">Mentors</a></li>
+				<li>|</li>
+				<li><a href="#fsection">Projects</a></li>
+				<li>|</li>
+				<li><a href="#fsection">Blog</a></li>
+				<li>|</li>
+				<li class="rtopmenu-li-img">
+ 				<div class="dropdown-hover">
+				<a href="#" class="dropdown-a">
+				<table>
+				<tr><td><img class="rtopmenu-img" src="" id="menu-img" ></td>
+				<td><div id="menu-div" style="display:none;padding-top:10px"></div></td>
+				<td><img src="images/opt.png" style="padding-bottom: 4px; padding-left:10px;padding-top:16px;"></td></tr>
+				</table>
+				
+				</a>
+				</div>
+				<div class="dropdown-content">
+				<ul><li>
+					<a class='inline' href="#inline_content">View my profile</a></li> 
+					<li>
+					<a href="index.html"> Logout
+					</a></li>
+					</ul>
+				</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	
+	<!--  Starting content for About Us -->
+	<div id="templatemo_main">
+	<div class="col_w900 hr_divider">
+            
+            	<div class="col_w900 lp_box float_l">
+                    <h2 style="font-family: Rockwell;">About Us</h2>
+                    <img class="image_wrapper image_fl" src="images/abtus.png" alt="image" />
+                    <p><em>Techconnects is a one of its kind socio-technical platform for young engineers to connect with the professional
+                     world to serve there technical aptitude, widen there technical approach towards problem solving & enhance their skills right
+                     from the beginning to face the very corporate world, giving our society a better & enhanced quality of living, one product at a time.</em></p>
+                  	<p>Techconnects aims to connect the students to a worldwide like minded progressive students base & also to the industry experts (Mentors) 
+                  	who have been in the same position a few years back & have carved there way out into this very corporate professional world.</p>
+                    <p>The vision is to support a student not only with there smallest of technical questions or end year projects but also to put there smallest of 
+                    ideas onto an innovation platform & develop with them the professional & commercial viability of it. To patent the idea & transforming the 
+                    unique idea into an invention & the student an Inventor.</p>
+				</div>
+                
+                               
+                <div class="cleaner"></div>
+            </div>
+			</div>
+	
+	<!-- End -->
+
+
+	<div class="bottommenubar" style="display: block !important;margin-top: 0px !important;">
+			<div class="lbottommenu">
+				<ul>
+					<li><a href="#fsection"><em>TECHCONNECTS</em></a></li>
+				</ul>
+			</div>
+			<div class="rbottommenu">
+				<ul>
+					<li>About Us</li>
+					<li>|</li>
+					<li><a href="#" id="a-coe">Code of Ethics</a></li>
+					<li>|</li>
+					<li><a href="#" id="a-faq">FAQ</a></li>
+					<li>|</li>
+					<li><a href="#" id="a-terms">Terms of Service</a></li>
+				</ul>
+			</div>
+
+	</div>
+		    
+
+		
+		<div style='display: none' id="profilediv">
+		<div id='inline_content' style='padding: 10px; background: #fff;'>
+			<form id="profileForm" method="post" enctype="multipart/form-data">
+				<div id="page-wrap">
+					<div id="profile-top-bar">
+						<div id="profile-picture">
+							<div id="prupld" style="display: none;">
+								<input type="file"  id="primage" name="primage" class="classfile"
+									placeholder="upload image" onchange="changelabel(this.value)"/>
+									<label for="primage" onclick="togglepic(); return false;" id="uploadpic">Upload Image</label>
+									<label for="primage" style="display: none;" id="picname">check</label>
+							</div>
+							<div>
+								<img src="" id="profile-img" style="display:none;" />
+							</div>
+						</div>
+						<div id="profile-top-right">
+							<div id="user-name" class="username">Amit Srivastav</div>
+								<div id="fact-wrap">
+									<div class="user-fact" id="user-role">Student</div>
+								</div>
+						</div>
+					</div>
+					
+		            <div class="form-style-5">
+					
+					<fieldset>
+					<legend><span class="number">1</span> Personal Info</legend>
+					<label>Full Name</label><input type="text" name="prname" id="prname" placeholder="Your Name *" readonly="readonly">
+					<label>Email</label><input type="email" name="premail" id="premail" placeholder="Your Email *" readonly="readonly">
+					<label>Mobile</label><input type="text" name="prmobile" id="prmobile" placeholder="Your Mobile +91-*">
+					<label>College</label><input type="text" name="prcollege" id="prcollege" placeholder="Your College *">
+					<label>University</label><input type="text" name="pruniv" id="pruniv" placeholder="Your University *">
+					<label>Stream</label><input type="text" name="prstream" id="prstream" placeholder="Your Stream *">
+					<label>Year</label><input type="text" name="pryear" id="pryear" placeholder="Your Passing year *">
+					<label>Date of Birth</label><input type="text" name="prdob" id="prdob" placeholder="Your Date of Birth *">
+					<input type="hidden" name="session_id" id="session_id" value="">
+					<label>Interest Area</label><textarea name="printarea" id="printarea" placeholder="Interest Area "></textarea>
+					
+					<legend><span class="number">2</span> Additional Info</legend>
+					<textarea name="pryourself" id="pryourself" placeholder="About Yourself "></textarea>
+					
+					<button type="button" class="prbutton" onclick="updateProfile(); return false;">Update Profile</button>
+					</fieldset>
+					
+					</div>
+		        </div>
+		        </form>
+					
+		    </div>
+		    </div>
+	
+
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js">
+			
+		</script>
+		<script type="text/javascript" src="js/jquery.getUrlParam.js"> </script>
+		<script type="text/javascript" src="js/colorbox/jquery.colorbox.js"> </script>
+		<script type="text/javascript" src="js/bootstrap-filestyle.js"> </script>
+		<script type="application/javascript">
+    
+    function togglelogout() {
+    	$('.dropdown-content').toggle();
+    }
+    
+    function togglepic() {
+    	$('#uploadpic').hide();
+    	
+    	$('#primage').click();
+    	
+    	   	
+    }
+    
+    function hideImages() {
+    	document.getElementById('picname').style.display = 'none';
+    	document.getElementById('uploadpic').style.display = 'block';
+    	document.getElementById('profile-img').style.display = 'none';
+    }
+    function changelabel(filepath) {
+    	
+    	var filearray  = filepath.split('\\');
+    	$('#picname').text(filearray[2]);
+    	
+    	document.getElementById('picname').style.display = 'block';
+    	
+    }
+    
+/* 	$("#primage").filestyle({
+		placeholder: 'Picture',
+		text: 'Upload Image',
+		btnClass : 'btn-secondary'
+	}); */
+	window.pressed = function(){
+	    var a = document.getElementById('dc-upl');
+	    if(a.value == "")
+	    {
+	        fileLabel.innerHTML = "Choose file";
+	    }
+	    else
+	    {
+	        var theSplit = a.value.split('\\');
+	        fileLabel.innerHTML = theSplit[theSplit.length-1];
+	    }
+	};
+	
+	$( document ).ready(function() {
+				
+				
+		    	
+				$(".inline").colorbox({inline:true, width:"80%", height: "100%"});
+				
+				var session_id = $(document).getUrlParam("session_id");
+				//var url = 'http://localhost.tmmna.com:8080/TechConnectWebDb/pullRecord.htm?session_id=' + session_id;
+				var url = 'https://ec2-18-221-3-118.us-east-2.compute.amazonaws.com/TechConnectWebDb/pullRecord.htm?session_id=' + session_id;
+				$.ajax({
+					crossDomain: true,
+		             type: "GET",
+		             url: url,
+		             contentType: "application/x-www-form-urlencoded",
+		             dataType: "xml",
+		            success: function (msg) {
+		                //debugger;
+		                //if(msg== null ) {
+		                //	window.open("index.html","_self");
+		                //}
+		                $('#pname').text(msg.getElementsByTagName('first-name')[0].innerHTML);
+		                $('#user-name').text( msg.getElementsByTagName('first-name')[0].innerHTML + ' ' + msg.getElementsByTagName('last-name')[0].innerHTML);
+		                $('#prname').val( msg.getElementsByTagName('first-name')[0].innerHTML + ' ' + msg.getElementsByTagName('last-name')[0].innerHTML);
+		                $('#user-role').text(msg.getElementsByTagName('role')[0].innerHTML);
+		                $('#premail').val(msg.getElementsByTagName('email-id')[0].innerHTML);
+		                if(typeof msg.getElementsByTagName('mobile')[0] != "undefined" ) {
+		                	$('#prmobile').val(msg.getElementsByTagName('mobile')[0].innerHTML);
+		                }		                
+		                if(typeof msg.getElementsByTagName('college')[0] != "undefined" ) {
+		                	$('#prcollege').val(msg.getElementsByTagName('college')[0].innerHTML);
+		                }
+		                if(typeof msg.getElementsByTagName('university')[0] != "undefined" ) {
+		                	$('#pruniv').val(msg.getElementsByTagName('university')[0].innerHTML);
+		                }
+		                if(typeof msg.firstElementChild.getAttribute('year') != "undefined" ) {
+		                	$('#pryear').val(msg.firstElementChild.getAttribute('year'));
+		                }
+		                if(typeof msg.getElementsByTagName('stream')[0] != "undefined" ) {
+		                	$('#prstream').val(msg.getElementsByTagName('stream')[0].innerHTML);
+		                }
+		                if(typeof msg.getElementsByTagName('dob')[0] != "undefined" ) {
+		                	$('#prdob').val(msg.getElementsByTagName('dob')[0].innerHTML);
+		                }
+		                if(typeof msg.getElementsByTagName('interest_area')[0] != "undefined" ) {
+		                	$('#printarea').val(msg.getElementsByTagName('interest-area')[0].innerHTML);
+		                }
+		                if(typeof msg.getElementsByTagName('profile')[0] != "undefined" ) {
+		                	$('#pryourself').val(msg.getElementsByTagName('profile')[0].innerHTML);
+		                }
+		                
+		               if(typeof msg.getElementsByTagName('image-file')[0] != "undefined" && msg.getElementsByTagName('image-file')[0].innerHTML.trim() != '') {
+		            	   document.getElementById('profile-img').style.display = 'block';
+		                	$('#profile-img').attr('src',msg.getElementsByTagName('image-file')[0].innerHTML);
+		                	$('.rtopmenu-img').attr('src',msg.getElementsByTagName('image-file')[0].innerHTML);
+		                	$('#img-mentor').attr('src',msg.getElementsByTagName('image-file')[0].innerHTML);
+		                }else { 
+		                	$('#prupld').show();
+		                	document.getElementById('menu-img').style.display = 'none';
+		                	$('#menu-div').text(msg.getElementsByTagName('first-name')[0].innerHTML);
+		                	document.getElementById('menu-div').style.display = 'block';
+		                }
+		                $('#profilemenu').text('Profile (' + msg.firstElementChild.getAttribute('profile-percent') + '%)');
+		            },
+		            error: function (xhr, status, error) {
+		                //debugger;
+		            }
+		        });
+				
+				var toggleClick = function(){
+
+					var divObj = $('.dropdown-content');
+			        var nstyle = divObj.css("display");
+
+			        if(nstyle == "none"){
+			            divObj.slideDown(false,function(){
+			                $("html").bind("click",function(){
+			                    divObj.slideUp();
+			                    $("html").unbind("click");
+			                });
+			            });
+			        }
+			    };
+
+			    $(".dropdown-a").click(toggleClick);
+			    $("#a-home").attr("href","home.html?session_id=" + session_id);
+			    $("#a-mentors").attr("href","mentors.html?session_id=" + session_id);
+			    $("#a-aboutus").attr("href","about_us.html?session_id=" + session_id);
+			    $("#a-coe").attr("href","mentors.html?session_id=" + session_id);
+			    $("#a-faq").attr("href","mentors.html?session_id=" + session_id);
+			    $("#a-terms").attr("href","mentors.html?session_id=" + session_id);
+			    
+			});
+			
+			function updateProfile() {
+				$('#profilediv').hide();
+				var session_id = $(document).getUrlParam("session_id");
+				var form = $('#profileForm')[0];
+				var data = new FormData(form);
+				//var url = 'http://localhost.tmmna.com:8080/TechConnectWebDb/updateProfile.htm?session_id=' + session_id;
+				var url = 'https://ec2-18-221-3-118.us-east-2.compute.amazonaws.com/TechConnectWebDb/updateProfile.htm?session_id=' + session_id;
+				
+				$.ajax({
+					crossDomain: true,
+		             type: "post",
+		             url: url,
+		             data: data,
+		             enctype:"multipart/form-data",
+		             processData: false,
+		             contentType: false,
+		             cache: false,
+		             timeout: 600000,
+		             dataType:"text",
+		            success: function (msg) {
+		                location.reload();
+		            },
+		            error: function (xhr, status, error) {
+		                //debugger;
+		            }
+		        });
+			}
+			
+function togglemenu(id) {
+		    	
+		    	$('.nohover').css({'background': ''});
+		    	$('.bottommenubar').show();
+		    	
+			    if(id == 1) {
+			    	
+			    	document.getElementById('hl-container-div').style.display='block';
+			    	document.getElementById('cb-container-div').style.display='none';
+			    	document.getElementById('pp-container-div').style.display='none';
+			    	
+			    	$('#li-hl').css({'background': 'white','border-top': '6px solid #303030','margin-left': '4px'});
+			    	$('#li-cb').css({'background': '#303030','border-top': ''});
+			    	$('#li-pp').css({'background': '#303030','border-top': '','margin-right': ''});
+			    	
+			    	$('#a-hl').css({'color':'#33adff','font-weight': 'bold'});
+			    	$('#a-cb').css({'color':'white','font-weight': ''});
+			    	$('#a-pp').css({'color':'white','font-weight': ''});
+			    }
+			    if(id == 2) {
+			    	
+			    	document.getElementById('cb-container-div').style.display='block';
+			    	document.getElementById('pp-container-div').style.display='none';
+			    	document.getElementById('hl-container-div').style.display='none';
+			    	
+			    	$('#li-hl').removeClass('hl-active');
+			    	$('#li-hl').addClass('hl-inactive');
+			    	$('#li-cb').css({'background': 'white','border-top': '6px solid #303030'});
+			    	$('#li-hl').css({'background': '#303030','border-top': '','margin-left': ''});
+			    	$('#li-pp').css({'background': '#303030','border-top': '','margin-right': ''});
+			    	
+			    	
+			    	$('#a-hl').css({'color':'white','font-weight': ''});
+			    	$('#a-cb').css({'color':'#33adff','font-weight': 'bold'});
+			    	$('#a-pp').css({'color':'white','font-weight': ''});
+			    	
+			    }
+			    if(id == 3) {
+			    	document.getElementById('pp-container-div').style.display='block';
+			    	document.getElementById('cb-container-div').style.display='none';
+			    	document.getElementById('hl-container-div').style.display='none';
+			    	
+			    	$('#li-hl').removeClass('hl-active');
+			    	$('#li-hl').addClass('hl-inactive');
+			    	
+			    	$('#li-pp').css({'background': 'white','border-top': '6px solid #303030','margin-right': ''});
+			    	$('#li-hl').css({'background': '#303030','border-top': '','margin-left': ''});
+			    	$('#li-cb').css({'background': '#303030','border-top': ''});
+			    	
+			    	
+			    	$('#a-hl').css({'color':'white','font-weight': ''});
+			    	$('#a-cb').css({'color':'white','font-weight': ''});
+			    	$('#a-pp').css({'color':'#33adff','font-weight': 'bold'});
+			    }
+		    }
+	</script>
+</body>
+</html>
