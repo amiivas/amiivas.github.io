@@ -388,6 +388,11 @@ padding-top: 30px;
 	
 }
 
+.h-bottommenubar {
+	background: #303030;
+	height: 60px;
+	width: 100%;
+}
 /*Bottom Menu bar css */
 
 .lbottommenu {
@@ -957,6 +962,28 @@ margin-left: 2em;
 width: 700px; height: 400px; margin-left: 250px;
 }
 
+.cb_ur_idea {
+	width: 700px; height: 400px; float: right;
+	padding-left: 10px;
+	
+}
+.cb_ur_idea p {
+	font-size: 16px;
+	text-align: justify;
+	padding: 5px 5px 5px 10px;
+}
+
+.cb_ur_idea h2 {
+  padding: 5px;
+  background: #33adff; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #33adff, white); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #33adff,white); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #33adff, white); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #33adff, white); /* Standard syntax */
+  font-family: Rockwell;
+  font-size: 20px !important;
+  color: white;
+}
 .dc-div p {
 	font-size: 16px;
 	text-align: justify;
@@ -995,6 +1022,35 @@ width: 700px; height: 400px; margin-left: 250px;
     position: relative;
     text-align: center;
     width: 100%;
+}
+
+
+.h-cb-div{
+	width:370px;
+	height: 260px;
+	float: left; 
+	background: #303030;
+}
+
+.h-cb-div a {
+    color:  #b3b6b7; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 30px; /* Add some padding */
+    text-decoration: none; /* Remove underline from links */
+    height: 130px;
+    font-size: 24px;
+    font-family: Rockwell;
+    border-left: 5px solid #303030;
+    
+}
+
+.h-cb-div a:hover {
+    color: #fff; /* Dark grey background on mouse-over */
+}
+
+.h-cb-div a.active {
+    background-color: white; /* Add a green color to the "active/current" link */
+    color: #303030;
 }
 
 <!-- highlight section -->
@@ -1108,6 +1164,7 @@ width: 700px; height: 400px; margin-left: 250px;
 	font-size: 18px; 
 	font-weight: bold; 
 	font-style: italic; 
+	float: right;
 }
 
 .clientname span a { 
@@ -1165,4 +1222,16 @@ a.more:hover {
 .image_fr { 
 	float: right; 
 	margin: 3px 0 0 15px; 
+}
+
+.margin_top_700 {
+
+	margin-top: 700px;
+	
+}
+.margin_top_900 {
+	margin-top: 900px;
+}
+.margin_top_500 {
+	margin-top: 500px;
 }
