@@ -330,7 +330,11 @@ technology could change the way it had been always, simplifying itself in the pr
 				
 				var session_id = $(document).getUrlParam("session_id");
 				//var url = 'http://localhost.tmmna.com:8080/TechConnectWebDb/pullRecord.htm?session_id=' + session_id;
-				var url = 'https://ec2-18-221-3-118.us-east-2.compute.amazonaws.com/TechConnectWebDb/pullRecord.htm?session_id=' + session_id;
+				//Amit 1st ec2: 
+				//var url = 'https://ec2-18-221-3-118.us-east-2.compute.amazonaws.com/TechConnectWebDb/pullRecord.htm?session_id=' + session_id;
+				//TechConnects EC2:
+				var url = 'https://ec2-18-220-67-122.us-east-2.compute.amazonaws.com/TechConnectWebDb/pullRecord.htm?session_id=' + session_id;
+				
 				$.ajax({
 					crossDomain: true,
 		             type: "GET",
@@ -420,7 +424,10 @@ technology could change the way it had been always, simplifying itself in the pr
 				var form = $('#profileForm')[0];
 				var data = new FormData(form);
 				//var url = 'http://localhost.tmmna.com:8080/TechConnectWebDb/updateProfile.htm?session_id=' + session_id;
-				var url = 'https://ec2-18-221-3-118.us-east-2.compute.amazonaws.com/TechConnectWebDb/updateProfile.htm?session_id=' + session_id;
+				//Amit 1st ec2: 
+				//var url = 'https://ec2-18-221-3-118.us-east-2.compute.amazonaws.com/TechConnectWebDb/updateProfile.htm?session_id=' + session_id;
+				//TechConnects EC2:
+				var url = 'https://ec2-18-220-67-122.us-east-2.compute.amazonaws.com/TechConnectWebDb/updateProfile.htm?session_id=' + session_id;				
 				
 				$.ajax({
 					crossDomain: true,

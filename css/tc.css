@@ -3,6 +3,7 @@ body {
 
   height: 100%;
   font-family: "Rockwell";
+  margin: auto;
 }
 
 html { 
@@ -56,7 +57,7 @@ html {
 	height: 520px;
 	width: 100%;
 	position: absolute;
-	overflow: auto;
+	overflow: hidden;
 }
 
 
@@ -65,15 +66,15 @@ html {
 }
 
 .container1 {
-	margin-left: 150px;
+	margin-left: 10%;
 	font-family: "Rockwell";
-	max-width: 700px;
+	width: 50%;
 	float: left;
 }
 .container1 h1 {
 	font-family: "Rockwell";
 	padding-top: 18px;
-	font-size: 54px;
+	font-size: 50px;
 }
 
 .container1 p {
@@ -84,9 +85,9 @@ html {
 .container2 {
     position: relative;
     z-index: 2;
-	margin-right: 150px;
+	margin-right: 10%;
 	background: #303030;
-	width: 400px;
+	width: 25%;
 	height: 320px;
 	float: right;
 	margin-top: 95px;
@@ -260,7 +261,7 @@ padding-top: 30px;
 
 .tpage {
 	height: 400px;
-	margin-left: 150px;
+	margin-left: 10%;
 	width: 100%;
 	float: left;
 	display: none;
@@ -268,24 +269,30 @@ padding-top: 30px;
 	outline: none;
 		
 }
+.inv-div {
+	overflow: hidden;
+	height: 400px;
+	float: left;
+	width: 50%;
+}
+
 .tpage h1 {
-	font-size: 54px;
+	font-size: 50px;
 	font-family: "Rockwell";
 }
 
 .tpage p {
-	width: 700px;
 	font-size: 20px;
 	text-align: justify;
 }
 
 .inv-img {
 	float: right;
-	max-width: 450px;
-	max-height: 450px;
+	max-width: 30%;
+	max-height: 30%;
 	/*border: 1px solid #ccc;*/
-	margin-right: 300px;
-	margin-top: 70px;
+	margin-right: 17%;
+	margin-top: 95px;
 	
 }
 
@@ -509,11 +516,6 @@ padding-top: 30px;
 
 /* bottom Menu bar css ends */
 
-.inv-div {
-	overflow: auto;
-	height: 400px;
-	float: left;
-}
 
 .inv-img img {
 margin-top: -20px;

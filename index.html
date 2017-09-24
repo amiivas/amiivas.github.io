@@ -18,6 +18,7 @@
 				<li><a href="#scontent" onclick="togglemenu(2);">EVOLVE</a></li>
 				<li>|</li>
 				<li><a href="#scontent" onclick="togglemenu(3);">INVENT</a></li>
+				
 			</ul>
 		</div>
 		<div class="rtopmenu">
@@ -37,13 +38,12 @@
     <p>TechConnects is a platform where students and mentors gets involved, invent with their ideas and in process evolve 
     themselves for a bright future.</p>
     
-    <p>TechConnects provides a medium for students to submit their ideas irrespective of how small or non-sensical it is. Each
+    <p>TechConnects provides a medium for students to submit their ideas irrespective of how small or nonsensical it is. Each
     idea is protected, reviewed and guided by mentors who have proven themselves with their vast on-field experience.</p>
     
-    <p>TechConnects allows student accross geographical area to work together on same idea and colloborate to produce a end product.</p>
+    <p>TechConnects will help these ideas to get patented and market it for business opportunities.</p>
     
-    <p>TechConnects will help these ideas to patented and market it for business opportunities.</p>
-     			
+    <p style="margin-left:90%;"><a class="more" href="about_us.html">More</a></p> 			
   	</div>
 
   	<div class="container2">
@@ -331,7 +331,11 @@
 		    			
 		    			var data = $('#register').serialize();    			
 		    			//var url = 'http://127.0.0.1:8080/TechConnectWebDb/register.htm?session_id=' + uuid;
-		    			var url = 'https://ec2-18-221-3-118.us-east-2.compute.amazonaws.com/TechConnectWebDb/register.htm?session_id=' + uuid;
+		    			//Amit 1st ec2: 
+						//var url = 'https://ec2-18-221-3-118.us-east-2.compute.amazonaws.com/TechConnectWebDb/register.htm?session_id=' + uuid;
+						//TechConnects EC2:
+						var url = 'https://ec2-18-220-67-122.us-east-2.compute.amazonaws.com/TechConnectWebDb/register.htm?session_id=' + uuid;
+		    			
 		    			var actionurl = 'home.html?session_id=' + uuid;
 						$.ajax({
 							crossDomain: true,
@@ -395,7 +399,11 @@
 		    		 var uuid = uuidv4();
 		    		 var data = $('#login').serialize();
 		    		 //var url = 'http://127.0.0.1:8080/TechConnectWebDb/login.htm?session_id=' + uuid;
-		 			 var url = 'https://ec2-18-221-3-118.us-east-2.compute.amazonaws.com/TechConnectWebDb/login.htm?session_id=' + uuid;
+		    		 //Amit 1st EC2:
+		 			 //var url = 'https://ec2-18-221-3-118.us-east-2.compute.amazonaws.com/TechConnectWebDb/login.htm?session_id=' + uuid;
+		    		 //TechConnects EC2:
+		 			 var url = 'https://ec2-18-220-67-122.us-east-2.compute.amazonaws.com/TechConnectWebDb/login.htm?session_id=' + uuid;
+		 			 
 		 			 var actionurl = 'home.html?session_id=' + uuid;
 						$.ajax({
 							crossDomain: true,
